@@ -447,8 +447,27 @@ document.addEventListener('DOMContentLoaded', function() {
                     Call: 0917 124 4358`;
         }
         
+        // About salon queries
+        if (lowerMessage.includes('about') || lowerMessage.includes('history') || lowerMessage.includes('when') || lowerMessage.includes('years')) {
+            return `🏛️ <strong>ABOUT SALON DEL MEN DO:</strong><br><br>
+                    <strong>🎉 Established:</strong> October 28, 2022<br>
+                    <strong>⏰ Years of Service:</strong> Since 2022, serving with excellence<br><br>
+                    
+                    <strong>🌟 Our Mission:</strong><br>
+                    We believe beauty knows no boundaries! Our salon is a modern sanctuary where men and women experience exceptional service in an inclusive, welcoming environment.<br><br>
+                    
+                    <strong>💎 Our Commitment:</strong><br>
+                    • Premium beauty & wellness services<br>
+                    • Skilled professional team<br>
+                    • Latest beauty trends & classic techniques<br>
+                    • Personalized service for every client<br><br>
+                    
+                    Building confidence and radiance since 2022! ✨`;
+        }
+
         if (lowerMessage.includes('hello') || lowerMessage.includes('hi') || lowerMessage.includes('hey')) {
             return `👋 <strong>Hello! Welcome to Salon del MEN do!</strong><br><br>
+                    <strong>🎉 Serving since October 28, 2022</strong><br><br>
                     I'm here to help you with:<br>
                     • Service information & pricing<br>
                     • Booking appointments<br>
