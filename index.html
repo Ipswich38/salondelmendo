@@ -1027,11 +1027,42 @@
             opacity: 1;
         }
 
-        .salon-video {
+        .salon-video,
+        .salon-front-image {
             width: 100%;
             height: 100%;
             object-fit: cover;
             border-radius: 24px;
+        }
+
+        .image-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            color: white;
+            padding: 2rem;
+            border-radius: 0 0 24px 24px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .about-video:hover .image-overlay {
+            transform: translateY(0);
+        }
+
+        .image-overlay h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+
+        .image-overlay p {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin: 0;
         }
 
         .video-overlay {
@@ -2000,27 +2031,75 @@
         .quick-replies {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 0.5rem;
+            gap: 0.75rem;
+            margin-top: 1rem;
+            justify-content: center;
+            padding: 1.5rem 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 0, 153, 0.4);
+            border-radius: 50px;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 8px 32px rgba(255, 0, 153, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quick-replies::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255, 0, 153, 0.1), rgba(155, 89, 182, 0.05));
+            border-radius: 50px;
+            z-index: -1;
         }
 
         .quick-reply {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            padding: 0.5rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.15), rgba(155, 89, 182, 0.15));
+            border: 1.5px solid rgba(52, 152, 219, 0.3);
+            padding: 0.75rem 1.2rem;
+            border-radius: 25px;
+            font-size: 0.85rem;
+            font-weight: 600;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             color: var(--pure-white);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(15px);
+            position: relative;
+            overflow: hidden;
+            text-transform: none;
+            letter-spacing: 0.3px;
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.1);
+        }
+
+        .quick-reply::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .quick-reply:hover::before {
+            left: 100%;
         }
 
         .quick-reply:hover {
             background: linear-gradient(135deg, var(--cyber-blue), var(--neon-pink));
             color: var(--pure-white);
             border-color: var(--cyber-blue);
-            box-shadow: var(--shadow-neon);
+            box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4), var(--shadow-neon);
+            transform: translateY(-2px) scale(1.05);
+        }
+
+        .quick-reply:active {
+            transform: translateY(0) scale(0.98);
+            transition: all 0.15s ease;
         }
 
         .chatbot-input {
@@ -2213,6 +2292,10 @@
         .salon-name {
             display: inline;
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        
+        .salon-name .salon {
+            color: #E8B4B8; /* Light pink */
         }
         
         .salon-name .del {
@@ -3816,23 +3899,14 @@
                     <p>From the moment you step through our doors, you'll experience personalized service tailored to your unique style and preferences. We're not just about looking good – we're about feeling confident and radiant.</p>
                 </div>
                 <div class="about-video">
-                    <video 
-                        class="salon-video" 
-                        autoplay 
-                        muted 
-                        loop 
-                        playsinline
-                        poster="public/salon-poster.jpg">
-                        <source src="public/3997849-uhd_2160_4096_25fps.mp4" type="video/mp4">
-                        <div class="video-fallback">
-                            <h3>Modern Salon Experience</h3>
-                            <p>Where style meets comfort</p>
-                            <p class="video-note">Video not supported in your browser</p>
-                        </div>
-                    </video>
-                    <div class="video-overlay">
-                        <h3>Modern Salon Experience</h3>
-                        <p>Where style meets comfort</p>
+                    <img 
+                        class="salon-front-image" 
+                        src="/786FC6D4-38CC-493A-BD43-8081583138A7.png" 
+                        alt="Salon delMENdo Front Entrance"
+                        loading="lazy" />
+                    <div class="image-overlay">
+                        <h3>Our Beautiful Salon</h3>
+                        <p>Visit us at our modern, welcoming space in Bulacan</p>
                     </div>
                 </div>
             </div>
@@ -3923,7 +3997,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 <span class="salon-name">Salon <span class="del">del</span><span class="men">MEN</span><span class="do">do</span></span>. All rights reserved. | For men and women</p>
+            <p>&copy; 2025 <span class="salon-name"><span class="salon">Salon</span> <span class="del">del</span><span class="men">MEN</span><span class="do">do</span></span>. All rights reserved. | For men and women</p>
         </div>
     </footer>
 
