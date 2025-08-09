@@ -360,4 +360,28 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Chatbot initialized successfully');
 });
 
+// Hair Services Interactive Main Image Update
+window.updateMainImage = function(imageSrc, title, description) {
+    const mainImage = document.getElementById('main-hair-image');
+    const mainTitle = document.getElementById('main-hair-title');
+    const mainDescription = document.getElementById('main-hair-description');
+    
+    if (mainImage && mainTitle && mainDescription) {
+        // Add fade effect
+        const featuredImage = mainImage.closest('.featured-image');
+        featuredImage.style.opacity = '0.7';
+        featuredImage.style.transform = 'scale(0.98)';
+        
+        setTimeout(() => {
+            mainImage.src = imageSrc;
+            mainTitle.textContent = title;
+            mainDescription.textContent = description;
+            
+            // Restore appearance with smooth animation
+            featuredImage.style.opacity = '1';
+            featuredImage.style.transform = 'scale(1)';
+        }, 200);
+    }
+};
+
 console.log('All JavaScript loaded successfully');

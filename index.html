@@ -1088,6 +1088,294 @@
             margin-top: 1rem;
         }
 
+        /* Hair Services Section */
+        .hair-services {
+            padding: 8rem 0;
+            background: linear-gradient(135deg, #ff0099 0%, #00ffff 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hair-services::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at center, rgba(232, 180, 184, 0.08) 0%, transparent 70%);
+            animation: float 25s ease-in-out infinite;
+        }
+
+        .services-showcase {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+            align-items: start;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Main Image Panel (Left) */
+        .main-image-panel {
+            position: relative;
+            z-index: 2;
+        }
+
+        .featured-image {
+            position: relative;
+            border-radius: 32px;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--electric-cyan) 0%, var(--hot-pink) 100%);
+            box-shadow: 
+                0 25px 80px rgba(0, 255, 255, 0.3),
+                0 15px 40px rgba(255, 0, 153, 0.25);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            height: 600px;
+        }
+
+        .featured-image:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 
+                0 35px 100px rgba(0, 255, 255, 0.4),
+                0 25px 60px rgba(255, 0, 153, 0.35);
+        }
+
+        .featured-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .featured-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .image-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(
+                transparent 0%,
+                rgba(0, 0, 0, 0.3) 30%,
+                rgba(0, 0, 0, 0.8) 100%
+            );
+            padding: 3rem 2.5rem 2.5rem;
+            color: white;
+        }
+
+        .overlay-content h3 {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 2.2rem;
+            font-weight: 300;
+            margin-bottom: 0.8rem;
+            letter-spacing: -0.02em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .overlay-content p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .service-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .feature-tag {
+            display: inline-block;
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .feature-tag:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.4);
+            transform: translateY(-2px);
+        }
+
+        /* Services Gallery Panel (Right) */
+        .services-gallery-panel {
+            z-index: 2;
+            position: relative;
+        }
+
+        .gallery-title {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 2rem;
+            font-weight: 300;
+            color: white;
+            margin-bottom: 2rem;
+            text-align: center;
+            letter-spacing: -0.01em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1.2rem;
+            max-height: 600px;
+            overflow-y: auto;
+            padding-right: 0.5rem;
+        }
+
+        .services-grid::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .services-grid::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+
+        .services-grid::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 4px;
+        }
+
+        .services-grid::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .service-item {
+            position: relative;
+            aspect-ratio: 1;
+            border-radius: 20px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background: linear-gradient(135deg, var(--electric-cyan) 0%, var(--hot-pink) 100%);
+            box-shadow: 
+                0 8px 25px rgba(0, 255, 255, 0.2),
+                0 4px 15px rgba(255, 0, 153, 0.15);
+        }
+
+        .service-item:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 
+                0 15px 40px rgba(0, 255, 255, 0.35),
+                0 10px 25px rgba(255, 0, 153, 0.25);
+        }
+
+        .service-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .service-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .service-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(
+                135deg,
+                rgba(0, 255, 255, 0.1) 0%,
+                rgba(255, 0, 153, 0.1) 100%
+            );
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .service-item:hover .service-overlay {
+            opacity: 1;
+        }
+
+        .service-icon {
+            font-size: 2rem;
+            filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        /* Responsive Design for Hair Services */
+        @media (max-width: 1200px) {
+            .services-showcase {
+                grid-template-columns: 1fr 1.3fr;
+                gap: 3rem;
+            }
+            
+            .featured-image {
+                height: 500px;
+            }
+            
+            .services-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                max-height: 500px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hair-services {
+                padding: 4rem 0;
+            }
+            
+            .services-showcase {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .featured-image {
+                height: 400px;
+            }
+            
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+                max-height: 300px;
+                gap: 1rem;
+            }
+            
+            .overlay-content h3 {
+                font-size: 1.8rem;
+            }
+            
+            .gallery-title {
+                font-size: 1.6rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .service-features {
+                gap: 0.5rem;
+            }
+            
+            .feature-tag {
+                font-size: 0.75rem;
+                padding: 6px 12px;
+            }
+        }
+
         /* Gallery Section */
         .gallery {
             padding: 8rem 0;
@@ -2826,6 +3114,126 @@
                 <span class="service-tag">Skincare</span>
                 <span class="service-tag">Body Treatments</span>
                 <span class="service-tag">Makeup & Beauty</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Luxury Divider -->
+    <div class="luxury-divider"></div>
+
+    <!-- Hair Services Section -->
+    <section class="hair-services" id="hair-services">
+        <div class="container">
+            <h2 class="section-title">Hair Services</h2>
+            
+            <div class="services-showcase">
+                <!-- Main Image Panel (Left) -->
+                <div class="main-image-panel">
+                    <div class="featured-image">
+                        <img src="https://images.pexels.com/photos/3993442/pexels-photo-3993442.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop" alt="Professional Hair Services" id="main-hair-image">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <h3 id="main-hair-title">Professional Hair Services</h3>
+                                <p id="main-hair-description">Expert styling for men and women</p>
+                                <div class="service-features">
+                                    <span class="feature-tag">✂️ Expert Cuts</span>
+                                    <span class="feature-tag">🎨 Color Specialist</span>
+                                    <span class="feature-tag">💫 Premium Care</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hair Gallery Panel (Right) -->
+                <div class="services-gallery-panel">
+                    <h3 class="gallery-title">Our Hair Transformations</h3>
+                    <div class="services-grid">
+                        <div class="service-item" onclick="updateMainImage('public/hairservices/22fc3158-d240-4afe-ab76-3b899682bb2e.jpeg', 'Professional Haircut', 'Precision cutting techniques')">
+                            <img src="public/hairservices/22fc3158-d240-4afe-ab76-3b899682bb2e.jpeg" alt="Hair Service" loading="lazy">
+                            <div class="service-overlay">
+                                <div class="service-icon">💇‍♀️</div>
+                            </div>
+                        </div>
+                        
+                        <div class="service-item" onclick="updateMainImage('public/hairservices/2e0674f3-936c-4fbf-8376-ec3222b1895f.jpeg', 'Hair Color', 'Beautiful transformations')">
+                            <img src="public/hairservices/2e0674f3-936c-4fbf-8376-ec3222b1895f.jpeg" alt="Hair Service" loading="lazy">
+                            <div class="service-overlay">
+                                <div class="service-icon">🎨</div>
+                            </div>
+                        </div>
+                        
+                        <div class="service-item" onclick="updateMainImage('public/hairservices/343fb0a6-7cec-440e-a937-d9fe1fe58da8.jpeg', 'Hair Styling', 'Premium styling services')">
+                            <img src="public/hairservices/343fb0a6-7cec-440e-a937-d9fe1fe58da8.jpeg" alt="Hair Service" loading="lazy">
+                            <div class="service-overlay">
+                                <div class="service-icon">✨</div>
+                            </div>
+                        </div>
+                        
+                        <div class="service-item" onclick="updateMainImage('public/hairservices/4cfb9263-d1d4-42f6-af5c-05757fa21c1e.jpeg', 'Hair Treatment', 'Nourishing care')">
+                            <img src="public/hairservices/4cfb9263-d1d4-42f6-af5c-05757fa21c1e.jpeg" alt="Hair Service" loading="lazy">
+                            <div class="service-overlay">
+                                <div class="service-icon">🌿</div>
+                            </div>
+                        </div>
+                        
+                        <div class="service-item" onclick="updateMainImage('public/hairservices/54fb2b3f-d606-452b-920e-6c87dfcc0136.jpeg', 'Hair Rebond', 'Smooth & straight')">
+                            <img src="public/hairservices/54fb2b3f-d606-452b-920e-6c87dfcc0136.jpeg" alt="Hair Service" loading="lazy">
+                            <div class="service-overlay">
+                                <div class="service-icon">💫</div>
+                            </div>
+                        </div>
+                        
+                        <div class="service-item" onclick="updateMainImage('public/hairservices/67c302cc-7a8f-4cb4-9fdc-9003f923dba9.jpeg', 'Curly Styles', 'Beautiful curls')">
+                            <img src="public/hairservices/67c302cc-7a8f-4cb4-9fdc-9003f923dba9.jpeg" alt="Hair Service" loading="lazy">
+                            <div class="service-overlay">
+                                <div class="service-icon">🌀</div>
+                            </div>
+                        </div>
+                        
+                        <div class="service-item" onclick="updateMainImage('public/hairservices/73267688-8d79-46ba-9dd4-ad7066d49fbe.jpeg', 'Hair Extensions', 'Length & volume')">
+                            <img src="public/hairservices/73267688-8d79-46ba-9dd4-ad7066d49fbe.jpeg" alt="Hair Service" loading="lazy">
+                            <div class="service-overlay">
+                                <div class="service-icon">💁‍♀️</div>
+                            </div>
+                        </div>
+                        
+                        <div class="service-item" onclick="updateMainImage('public/hairservices/7654da75-1a38-4e03-abbc-7c1bac7478d8.jpeg', 'Highlights', 'Dimensional color')">
+                            <img src="public/hairservices/7654da75-1a38-4e03-abbc-7c1bac7478d8.jpeg" alt="Hair Service" loading="lazy">
+                            <div class="service-overlay">
+                                <div class="service-icon">⭐</div>
+                            </div>
+                        </div>
+                        
+                        <div class="service-item" onclick="updateMainImage('public/hairservices/8bee6734-9d0a-440f-808e-5212bfcfa2d6.jpeg', 'Bridal Hair', 'Wedding perfection')">
+                            <img src="public/hairservices/8bee6734-9d0a-440f-808e-5212bfcfa2d6.jpeg" alt="Hair Service" loading="lazy">
+                            <div class="service-overlay">
+                                <div class="service-icon">👰</div>
+                            </div>
+                        </div>
+                        
+                        <div class="service-item" onclick="updateMainImage('public/hairservices/a3938c16-dca8-4e89-a55d-c369d0e9c316.jpeg', 'Hair Blowout', 'Volume & shine')">
+                            <img src="public/hairservices/a3938c16-dca8-4e89-a55d-c369d0e9c316.jpeg" alt="Hair Service" loading="lazy">
+                            <div class="service-overlay">
+                                <div class="service-icon">💨</div>
+                            </div>
+                        </div>
+                        
+                        <div class="service-item" onclick="updateMainImage('public/hairservices/c676611c-02a5-4c78-a72f-0e2d2dcf05a6.jpeg', 'Men\'s Grooming', 'Professional cuts')">
+                            <img src="public/hairservices/c676611c-02a5-4c78-a72f-0e2d2dcf05a6.jpeg" alt="Hair Service" loading="lazy">
+                            <div class="service-overlay">
+                                <div class="service-icon">👨‍🦲</div>
+                            </div>
+                        </div>
+                        
+                        <div class="service-item" onclick="updateMainImage('public/hairservices/f4271163-2804-4ce2-acc4-b83b6938fb13.jpeg', 'Hair Repair', 'Damage restoration')">
+                            <img src="public/hairservices/f4271163-2804-4ce2-acc4-b83b6938fb13.jpeg" alt="Hair Service" loading="lazy">
+                            <div class="service-overlay">
+                                <div class="service-icon">🔧</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
