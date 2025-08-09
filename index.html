@@ -314,6 +314,33 @@
             height: auto;
         }
 
+        /* Floating effect for logo when scrolling */
+        header.scrolled .logo {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(15px) saturate(180%);
+            -webkit-backdrop-filter: blur(15px) saturate(180%);
+            border-radius: 50px;
+            padding: 0.5rem 1rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        /* Enhanced floating effect for navigation links when scrolling */
+        header.scrolled .nav-links {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Floating effect for contact CTA when scrolling */
+        header.scrolled .contact-cta {
+            box-shadow: 0 6px 25px rgba(255, 0, 153, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
 
         .dark header.scrolled {
             background: transparent;
