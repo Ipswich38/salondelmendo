@@ -283,6 +283,93 @@ document.addEventListener('DOMContentLoaded', function() {
     // Generate bot response
     function generateResponse(message) {
         const lowerMessage = message.toLowerCase();
+        console.log('User message:', message);
+        console.log('Lowercase message:', lowerMessage);
+        
+        // Beauty tips and recommendations - PRIORITY over pricing queries
+        if ((lowerMessage.includes('tip') && !lowerMessage.includes('price')) || 
+            (lowerMessage.includes('advice') && !lowerMessage.includes('cost')) || 
+            (lowerMessage.includes('recommend') && !lowerMessage.includes('how much')) || 
+            (lowerMessage.includes('help') && !lowerMessage.includes('price') && !lowerMessage.includes('cost') && !lowerMessage.includes('how much')) || 
+            (lowerMessage.includes('how to') && !lowerMessage.includes('price'))) {
+            console.log('Beauty tips condition triggered!');
+            
+            // Hair care tips that lead to salon services
+            if (lowerMessage.includes('hair') || lowerMessage.includes('damage') || lowerMessage.includes('dry')) {
+                return `💁‍♀️ <strong>HAIR CARE EXPERT TIPS:</strong><br><br>
+                        <strong>✨ For Damaged Hair:</strong><br>
+                        While deep conditioning at home helps, truly damaged hair needs professional intervention! Our <strong>Brazilian Keratin treatments</strong> (₱1,500+) can restore your hair's natural shine and strength from the inside out.<br><br>
+                        
+                        <strong>💡 Pro Tip:</strong> Heat styling without protection causes 80% of hair damage. Our stylists can teach you proper techniques during your next visit!<br><br>
+                        
+                        <strong>🌟 Salon Secret:</strong> Monthly professional treatments prevent 6 months of damage. Book a consultation to create your personalized hair recovery plan!<br><br>
+                        
+                        📞 Ready to transform your hair? Call 0917 124 4358`;
+            }
+            
+            if (lowerMessage.includes('color') || lowerMessage.includes('dye') || lowerMessage.includes('highlight')) {
+                return `🎨 <strong>HAIR COLOR EXPERT ADVICE:</strong><br><br>
+                        <strong>⚠️ Home Coloring Risks:</strong><br>
+                        DIY hair color can cause uneven results, chemical burns, and irreversible damage. Our professional colorists use premium organic formulas that protect while beautifying!<br><br>
+                        
+                        <strong>✨ Salon Advantage:</strong><br>
+                        • Color matching to your skin tone<br>
+                        • Damage prevention techniques<br>
+                        • Long-lasting, vibrant results<br>
+                        • Expert color correction if needed<br><br>
+                        
+                        <strong>💡 Secret Formula:</strong> Our organic colors (₱800+) last 3x longer than drugstore brands while nourishing your hair!<br><br>
+                        
+                        Book your color consultation today: 0917 124 4358`;
+            }
+            
+            if (lowerMessage.includes('skin') || lowerMessage.includes('acne') || lowerMessage.includes('wrinkle') || lowerMessage.includes('glow')) {
+                return `✨ <strong>SKINCARE EXPERT SECRETS:</strong><br><br>
+                        <strong>🧴 Home Skincare Reality:</strong><br>
+                        Over-the-counter products only work on the surface. Real transformation happens with professional treatments that penetrate deeper skin layers!<br><br>
+                        
+                        <strong>🎯 Pro Solutions:</strong><br>
+                        • Acne Problems? Our Anti-Acne Treatment (₱550) targets root causes<br>
+                        • Aging Concerns? Pico Treatment (₱1,500) stimulates collagen production<br>
+                        • Dull Skin? Diamond Peel (₱400) reveals your natural radiance<br><br>
+                        
+                        <strong>💫 Salon Secret:</strong> Professional facials every 4-6 weeks maintain optimal skin health year-round!<br><br>
+                        
+                        Ready for glowing skin? Book your facial analysis: 0917 124 4358`;
+            }
+            
+            if (lowerMessage.includes('nail') || lowerMessage.includes('manicure') || lowerMessage.includes('polish')) {
+                return `💅 <strong>NAIL CARE EXPERT TIPS:</strong><br><br>
+                        <strong>🏠 Home Manicure Limitations:</strong><br>
+                        DIY nails chip within days because you lack professional-grade products and techniques. Our salon manicures last 2-3 weeks with proper application!<br><br>
+                        
+                        <strong>✨ Professional Difference:</strong><br>
+                        • Cuticle care that prevents infections<br>
+                        • Base coats that prevent staining<br>
+                        • Gel polishes that resist chipping<br>
+                        • Perfect shape for your lifestyle<br><br>
+                        
+                        <strong>💡 Insider Tip:</strong> Our Blue Sky gel polish (₱550) has a 3-week chip-free guarantee!<br><br>
+                        
+                        Treat your nails right: 0917 124 4358`;
+            }
+            
+            // General beauty advice for any other tip request
+            return `💄 <strong>BEAUTY EXPERT CONSULTATION:</strong><br><br>
+                    <strong>🌟 Universal Beauty Truth:</strong><br>
+                    Real beauty comes from professional care that enhances your natural features. Home routines maintain, but salon treatments transform!<br><br>
+                    
+                    <strong>✨ What We Recommend:</strong><br>
+                    • Monthly facials for healthy skin<br>
+                    • Quarterly hair treatments for damage prevention<br>
+                    • Professional nail care every 2-3 weeks<br>
+                    • Annual beauty consultations for personalized plans<br><br>
+                    
+                    <strong>💡 Free Beauty Assessment:</strong><br>
+                    Visit us for a complimentary consultation! Our experts will analyze your beauty needs and create a custom care plan.<br><br>
+                    
+                    Book your beauty transformation: 0917 124 4358`;
+        }
         
         // Hair services queries
         if (lowerMessage.includes('hair') && (lowerMessage.includes('price') || lowerMessage.includes('cost') || lowerMessage.includes('how much'))) {
@@ -474,85 +561,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     • Organic Triple + iCure: ₱3,900<br><br>
                     
                     Save more with our package deals!`;
-        }
-        
-        // Beauty tips and recommendations - Strategic salon encouragement
-        if (lowerMessage.includes('tip') || lowerMessage.includes('advice') || lowerMessage.includes('recommend') || lowerMessage.includes('help') || lowerMessage.includes('how to')) {
-            // Hair care tips that lead to salon services
-            if (lowerMessage.includes('hair') || lowerMessage.includes('damage') || lowerMessage.includes('dry')) {
-                return `💁‍♀️ <strong>HAIR CARE EXPERT TIPS:</strong><br><br>
-                        <strong>✨ For Damaged Hair:</strong><br>
-                        While deep conditioning at home helps, truly damaged hair needs professional intervention! Our <strong>Brazilian Keratin treatments</strong> (₱1,500+) can restore your hair's natural shine and strength from the inside out.<br><br>
-                        
-                        <strong>💡 Pro Tip:</strong> Heat styling without protection causes 80% of hair damage. Our stylists can teach you proper techniques during your next visit!<br><br>
-                        
-                        <strong>🌟 Salon Secret:</strong> Monthly professional treatments prevent 6 months of damage. Book a consultation to create your personalized hair recovery plan!<br><br>
-                        
-                        📞 Ready to transform your hair? Call 0917 124 4358`;
-            }
-            
-            if (lowerMessage.includes('color') || lowerMessage.includes('dye') || lowerMessage.includes('highlight')) {
-                return `🎨 <strong>HAIR COLOR EXPERT ADVICE:</strong><br><br>
-                        <strong>⚠️ Home Coloring Risks:</strong><br>
-                        DIY hair color can cause uneven results, chemical burns, and irreversible damage. Our professional colorists use premium organic formulas that protect while beautifying!<br><br>
-                        
-                        <strong>✨ Salon Advantage:</strong><br>
-                        • Color matching to your skin tone<br>
-                        • Damage prevention techniques<br>
-                        • Long-lasting, vibrant results<br>
-                        • Expert color correction if needed<br><br>
-                        
-                        <strong>💡 Secret Formula:</strong> Our organic colors (₱800+) last 3x longer than drugstore brands while nourishing your hair!<br><br>
-                        
-                        Book your color consultation today: 0917 124 4358`;
-            }
-            
-            if (lowerMessage.includes('skin') || lowerMessage.includes('acne') || lowerMessage.includes('wrinkle') || lowerMessage.includes('glow')) {
-                return `✨ <strong>SKINCARE EXPERT SECRETS:</strong><br><br>
-                        <strong>🧴 Home Skincare Reality:</strong><br>
-                        Over-the-counter products only work on the surface. Real transformation happens with professional treatments that penetrate deeper skin layers!<br><br>
-                        
-                        <strong>🎯 Pro Solutions:</strong><br>
-                        • Acne Problems? Our Anti-Acne Treatment (₱550) targets root causes<br>
-                        • Aging Concerns? Pico Treatment (₱1,500) stimulates collagen production<br>
-                        • Dull Skin? Diamond Peel (₱400) reveals your natural radiance<br><br>
-                        
-                        <strong>💫 Salon Secret:</strong> Professional facials every 4-6 weeks maintain optimal skin health year-round!<br><br>
-                        
-                        Ready for glowing skin? Book your facial analysis: 0917 124 4358`;
-            }
-            
-            if (lowerMessage.includes('nail') || lowerMessage.includes('manicure') || lowerMessage.includes('polish')) {
-                return `💅 <strong>NAIL CARE EXPERT TIPS:</strong><br><br>
-                        <strong>🏠 Home Manicure Limitations:</strong><br>
-                        DIY nails chip within days because you lack professional-grade products and techniques. Our salon manicures last 2-3 weeks with proper application!<br><br>
-                        
-                        <strong>✨ Professional Difference:</strong><br>
-                        • Cuticle care that prevents infections<br>
-                        • Base coats that prevent staining<br>
-                        • Gel polishes that resist chipping<br>
-                        • Perfect shape for your lifestyle<br><br>
-                        
-                        <strong>💡 Insider Tip:</strong> Our Blue Sky gel polish (₱550) has a 3-week chip-free guarantee!<br><br>
-                        
-                        Treat your nails right: 0917 124 4358`;
-            }
-            
-            // General beauty advice for any other tip request
-            return `💄 <strong>BEAUTY EXPERT CONSULTATION:</strong><br><br>
-                    <strong>🌟 Universal Beauty Truth:</strong><br>
-                    Real beauty comes from professional care that enhances your natural features. Home routines maintain, but salon treatments transform!<br><br>
-                    
-                    <strong>✨ What We Recommend:</strong><br>
-                    • Monthly facials for healthy skin<br>
-                    • Quarterly hair treatments for damage prevention<br>
-                    • Professional nail care every 2-3 weeks<br>
-                    • Annual beauty consultations for personalized plans<br><br>
-                    
-                    <strong>💡 Free Beauty Assessment:</strong><br>
-                    Visit us for a complimentary consultation! Our experts will analyze your beauty needs and create a custom care plan.<br><br>
-                    
-                    Book your beauty transformation: 0917 124 4358`;
         }
         
         // Enhanced interactive responses with personality
