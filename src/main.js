@@ -408,4 +408,49 @@ window.updateNailMainImage = function(imageSrc, title, description) {
     }
 };
 
+// Gallery Navigation to Dedicated Sections
+document.addEventListener('DOMContentLoaded', function() {
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    
+    galleryItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+            const category = this.getAttribute('data-category');
+            let targetSection = null;
+            
+            // Determine which section to scroll to based on category
+            if (category === 'hair') {
+                targetSection = document.getElementById('hair-services');
+            } else if (category === 'nails') {
+                targetSection = document.getElementById('nail-services');
+            }
+            
+            // If we have a target section, smooth scroll to it
+            if (targetSection) {
+                e.preventDefault(); // Prevent any default behavior
+                
+                const headerOffset = 100; // Account for fixed header
+                const elementPosition = targetSection.offsetTop;
+                const offsetPosition = elementPosition - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+                
+                // Add a subtle highlight effect to the target section
+                targetSection.style.transform = 'scale(1.01)';
+                targetSection.style.transition = 'transform 0.3s ease';
+                
+                setTimeout(() => {
+                    targetSection.style.transform = 'scale(1)';
+                }, 600);
+                
+                console.log(`Navigating to ${category} services section`);
+            }
+        });
+    });
+    
+    console.log('Gallery navigation initialized for hair and nail services');
+});
+
 console.log('All JavaScript loaded successfully');
