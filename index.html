@@ -2334,6 +2334,212 @@
             }
         }
 
+        /* Shop Section */
+        .shop {
+            padding: 8rem 0;
+            background: linear-gradient(135deg, rgba(20, 20, 30, 0.95) 0%, rgba(30, 30, 50, 0.9) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .shop::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.02)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 4rem;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+
+        .shop-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .product-item {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            position: relative;
+        }
+
+        .product-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(232, 180, 184, 0.1), rgba(64, 224, 208, 0.1));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: 20px;
+            z-index: 1;
+        }
+
+        .product-item:hover::before {
+            opacity: 1;
+        }
+
+        .product-item:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 
+                0 25px 50px rgba(0, 0, 0, 0.3),
+                0 0 30px rgba(232, 180, 184, 0.2);
+            border-color: rgba(232, 180, 184, 0.3);
+        }
+
+        .product-image {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .product-item:hover .product-image img {
+            transform: scale(1.1);
+        }
+
+        .product-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(transparent 50%, rgba(0, 0, 0, 0.8));
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 1.5rem;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .product-item:hover .product-overlay {
+            opacity: 1;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .product-btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .product-btn:not(.secondary) {
+            background: linear-gradient(135deg, var(--cyber-blue), var(--neon-pink));
+            color: white;
+        }
+
+        .product-btn.secondary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .product-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(232, 180, 184, 0.4);
+        }
+
+        .product-info {
+            padding: 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .product-info h4 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.3px;
+        }
+
+        .product-info p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .product-price {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--neon-pink);
+            letter-spacing: 0.3px;
+        }
+
+        .shop-cta {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+        }
+
+        .shop-note {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--cyber-blue), var(--neon-pink));
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 10px 30px rgba(232, 180, 184, 0.3);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(232, 180, 184, 0.4);
+        }
+
         /* Contact Section */
         .contact {
             padding: 8rem 0;
@@ -3267,6 +3473,15 @@
                 height: 220px;
             }
             
+            .shop-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1.5rem;
+            }
+            
+            .product-image {
+                height: 200px;
+            }
+            
             .about-video h3 {
                 font-size: 1.1rem;
             }
@@ -3417,6 +3632,7 @@
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#services">Services</a></li>
+                    <li><a href="#shop">Shop</a></li>
                     <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#about">About</a></li>
                 </ul>
@@ -3711,6 +3927,109 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Luxury Divider -->
+    <div class="luxury-divider"></div>
+
+    <!-- Shop Section -->
+    <section class="shop" id="shop">
+        <div class="container">
+            <h2 class="section-title">Premium Products</h2>
+            <p class="section-subtitle">Discover our curated collection of professional-grade beauty products</p>
+            
+            <div class="shop-grid">
+                <div class="product-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-image">
+                        <img src="public/shop/09363c60-cc34-4fd3-8d7d-966aed3444db.jpeg" alt="Premium Beauty Product" loading="lazy">
+                        <div class="product-overlay">
+                            <div class="product-actions">
+                                <button class="product-btn">View Details</button>
+                                <button class="product-btn secondary">Quick Look</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h4>Luxury Hair Care</h4>
+                        <p>Premium hair treatment products</p>
+                        <div class="product-price">Inquire for pricing</div>
+                    </div>
+                </div>
+
+                <div class="product-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-image">
+                        <img src="public/shop/324de20a-a564-4e77-858a-6b1e3070d3e0.jpeg" alt="Professional Beauty Product" loading="lazy">
+                        <div class="product-overlay">
+                            <div class="product-actions">
+                                <button class="product-btn">View Details</button>
+                                <button class="product-btn secondary">Quick Look</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h4>Skin Care Essentials</h4>
+                        <p>Professional-grade skincare</p>
+                        <div class="product-price">Inquire for pricing</div>
+                    </div>
+                </div>
+
+                <div class="product-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="product-image">
+                        <img src="public/shop/5084a81c-f3d4-46ee-bc65-675915186fd9.jpeg" alt="Beauty Product Collection" loading="lazy">
+                        <div class="product-overlay">
+                            <div class="product-actions">
+                                <button class="product-btn">View Details</button>
+                                <button class="product-btn secondary">Quick Look</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h4>Beauty Collection</h4>
+                        <p>Complete beauty regimen</p>
+                        <div class="product-price">Inquire for pricing</div>
+                    </div>
+                </div>
+
+                <div class="product-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="product-image">
+                        <img src="public/shop/9ea61037-edde-4613-9533-d82f98e05a2b.jpeg" alt="Nail Care Products" loading="lazy">
+                        <div class="product-overlay">
+                            <div class="product-actions">
+                                <button class="product-btn">View Details</button>
+                                <button class="product-btn secondary">Quick Look</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h4>Nail Care Pro</h4>
+                        <p>Professional nail treatments</p>
+                        <div class="product-price">Inquire for pricing</div>
+                    </div>
+                </div>
+
+                <div class="product-item" data-aos="fade-up" data-aos-delay="500">
+                    <div class="product-image">
+                        <img src="public/shop/f54a81bd-f9af-4ca8-a683-41d824345df7.jpeg" alt="Premium Salon Products" loading="lazy">
+                        <div class="product-overlay">
+                            <div class="product-actions">
+                                <button class="product-btn">View Details</button>
+                                <button class="product-btn secondary">Quick Look</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h4>Salon Essentials</h4>
+                        <p>Premium salon-grade products</p>
+                        <div class="product-price">Inquire for pricing</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shop-cta">
+                <p class="shop-note">All products are available for purchase at our salon. Contact us for detailed information and pricing.</p>
+                <button class="cta-btn">Contact Us About Products</button>
             </div>
         </div>
     </section>
