@@ -294,81 +294,317 @@ document.addEventListener('DOMContentLoaded', function() {
             (lowerMessage.includes('how to') && !lowerMessage.includes('price'))) {
             console.log('Beauty tips condition triggered!');
             
-            // Hair care tips that lead to salon services
-            if (lowerMessage.includes('hair') || lowerMessage.includes('damage') || lowerMessage.includes('dry')) {
-                return `💁‍♀️ <strong>HAIR CARE EXPERT TIPS:</strong><br><br>
-                        <strong>✨ For Damaged Hair:</strong><br>
-                        While deep conditioning at home helps, truly damaged hair needs professional intervention! Our <strong>Brazilian Keratin treatments</strong> (₱1,500+) can restore your hair's natural shine and strength from the inside out.<br><br>
+            // Advanced Hair Care Advice with Professional Knowledge
+            if (lowerMessage.includes('hair') || lowerMessage.includes('damage') || lowerMessage.includes('dry') || lowerMessage.includes('frizzy') || lowerMessage.includes('brittle')) {
+                // Damaged hair specific advice
+                if (lowerMessage.includes('damage') || lowerMessage.includes('brittle') || lowerMessage.includes('chemical') || lowerMessage.includes('heat')) {
+                    return `🔬 <strong>PROFESSIONAL HAIR DAMAGE REPAIR ADVICE:</strong><br><br>
+                            <strong>💡 Expert Insight:</strong> Damaged hair needs deep nourishment and protein reconstruction. Regular professional treatments can restore strength and shine better than home remedies.<br><br>
+                            
+                            <strong>🌟 Our Recommendation:</strong><br>
+                            • Keratin Treatment (₱350+): Perfect for smoothing and strengthening<br>
+                            • Semi de Lino (₱550+): Deep nourishment for severely damaged hair<br>
+                            • Brazilian Cysteine (₱2,800+): Intensive repair for chemical damage<br><br>
+                            
+                            <strong>⚡ Professional Advantage:</strong> Our treatments penetrate deeper than home products, rebuilding hair structure from within.<br><br>
+                            
+                            Don't let damaged hair hold you back! Call 0917 124 4358 for a hair consultation or follow Salon del MEN do on Facebook for hair transformation stories! 💫`;
+                }
+                
+                // Frizzy hair specific advice
+                if (lowerMessage.includes('frizz') || lowerMessage.includes('humid') || lowerMessage.includes('unmanage')) {
+                    return `🌊 <strong>FRIZZ ELIMINATION EXPERTISE:</strong><br><br>
+                            <strong>💡 Professional Truth:</strong> Frizz is caused by moisture imbalance and damaged cuticles. Professional smoothing treatments provide long-lasting frizz control that home products simply can't match.<br><br>
+                            
+                            <strong>✨ Frizz-Fighting Solutions:</strong><br>
+                            • Brazilian Botox (₱1,000+): Eliminates frizz for 3-6 months<br>
+                            • U-Keratin Treatment (₱1,500+): Deep smoothing and nourishment<br>
+                            • Rebonding Services (₱1,000+): Permanent frizz elimination<br><br>
+                            
+                            <strong>🔥 Salon Secret:</strong> Our treatments create a protective barrier that repels humidity - perfect for our tropical climate!<br><br>
+                            
+                            Say goodbye to frizz forever! Contact salondelmendo@gmail.com to discuss which smoothing treatment is perfect for your hair type. 🎯`;
+                }
+                
+                // General hair care advice
+                return `💇‍♀️ <strong>PROFESSIONAL HAIR CARE GUIDANCE:</strong><br><br>
+                        <strong>💡 Expert Advice:</strong> Healthy hair requires professional-grade treatments that penetrate deeper than home products. Regular salon care prevents damage before it starts.<br><br>
                         
-                        <strong>💡 Pro Tip:</strong> Heat styling without protection causes 80% of hair damage. Our stylists can teach you proper techniques during your next visit!<br><br>
+                        <strong>🌟 Treatment Recommendations:</strong><br>
+                        • Hair Spa (₱250+): Monthly maintenance for healthy hair<br>
+                        • Keratin Treatment (₱350+): Strength and shine restoration<br>
+                        • Brazilian Treatments (₱1,000-2,800): Deep repair and smoothing<br><br>
                         
-                        <strong>🌟 Salon Secret:</strong> Monthly professional treatments prevent 6 months of damage. Book a consultation to create your personalized hair recovery plan!<br><br>
+                        <strong>💫 Pro Tip:</strong> Combine treatments with our Color Services for maximum hair health and beauty!<br><br>
                         
-                        📞 Ready to transform your hair? Call 0917 124 4358`;
+                        Ready to transform your hair? Call 0917 124 4358 or follow Salon del MEN do on Facebook for daily hair care tips! ✨`;
             }
             
-            if (lowerMessage.includes('color') || lowerMessage.includes('dye') || lowerMessage.includes('highlight')) {
-                return `🎨 <strong>HAIR COLOR EXPERT ADVICE:</strong><br><br>
-                        <strong>⚠️ Home Coloring Risks:</strong><br>
-                        DIY hair color can cause uneven results, chemical burns, and irreversible damage. Our professional colorists use premium organic formulas that protect while beautifying!<br><br>
+            // Advanced Hair Color Consultation
+            if (lowerMessage.includes('color') || lowerMessage.includes('dye') || lowerMessage.includes('highlight') || lowerMessage.includes('gray') || lowerMessage.includes('blonde') || lowerMessage.includes('brunette')) {
+                // Gray hair specific advice
+                if (lowerMessage.includes('gray') || lowerMessage.includes('grey') || lowerMessage.includes('white hair')) {
+                    return `👩‍🦳 <strong>PROFESSIONAL GRAY COVERAGE EXPERTISE:</strong><br><br>
+                            <strong>💡 Expert Insight:</strong> Gray hair has a different texture and can be resistant to color. Professional application ensures even coverage and natural-looking results that last.<br><br>
+                            
+                            <strong>🌟 Gray Coverage Solutions:</strong><br>
+                            • Classic Color: Excellent gray coverage (₱600-800)<br>
+                            • Organic Color with Treatments: Gentle coverage (₱1,900+)<br>
+                            • Color + Treatment Packages: Complete care (₱1,700-4,000)<br><br>
+                            
+                            <strong>💫 Professional Advantage:</strong> We match colors perfectly to your skin tone while ensuring complete gray coverage that looks natural.<br><br>
+                            
+                            Embrace beautiful, natural-looking color! Visit us for a personalized consultation or call 0917 124 4358 to discuss your color goals. ✨`;
+                }
+                
+                // Color maintenance advice
+                if (lowerMessage.includes('fade') || lowerMessage.includes('maintain') || lowerMessage.includes('last longer')) {
+                    return `🎨 <strong>COLOR LONGEVITY PROFESSIONAL SECRETS:</strong><br><br>
+                            <strong>💡 Professional Truth:</strong> Professional hair coloring lasts longer and damages hair less than DIY methods. Using quality products and proper aftercare is essential for vibrant, lasting color.<br><br>
+                            
+                            <strong>✨ Long-Lasting Color Options:</strong><br>
+                            • Classic Color (₱600-800): 6-8 weeks of beautiful color<br>
+                            • Organic Color (₱800-1,000): Gentler formula, natural results<br>
+                            • Color + Treatment Combos: Enhanced longevity and hair health<br><br>
+                            
+                            <strong>🔥 Salon Secret:</strong> Add Botox or Keratin treatments to colored hair for extended vibrancy and protection!<br><br>
+                            
+                            Ready for a stunning color transformation? Book your color consultation at 0917 124 4358 or check our Facebook for color inspiration! 🌈`;
+                }
+                
+                // General color advice
+                return `🎨 <strong>PROFESSIONAL COLOR TRANSFORMATION GUIDANCE:</strong><br><br>
+                        <strong>⚠️ DIY vs Professional Reality:</strong> Home coloring can cause uneven results, chemical burns, and irreversible damage. Our professional colorists use premium formulas that protect while beautifying!<br><br>
                         
-                        <strong>✨ Salon Advantage:</strong><br>
-                        • Color matching to your skin tone<br>
+                        <strong>✨ Our Color Expertise:</strong><br>
+                        • Perfect color matching to your skin tone<br>
                         • Damage prevention techniques<br>
                         • Long-lasting, vibrant results<br>
-                        • Expert color correction if needed<br><br>
+                        • Expert color correction when needed<br><br>
                         
-                        <strong>💡 Secret Formula:</strong> Our organic colors (₱800+) last 3x longer than drugstore brands while nourishing your hair!<br><br>
+                        <strong>💡 Color Options:</strong> Classic (₱600-800) or Organic formulas (₱800-1,000) - both last 3x longer than drugstore brands!<br><br>
                         
-                        Book your color consultation today: 0917 124 4358`;
+                        Book your color consultation today: 0917 124 4358 or follow Salon del MEN do on Facebook for daily color care tips! 💫`;
             }
             
-            if (lowerMessage.includes('skin') || lowerMessage.includes('acne') || lowerMessage.includes('wrinkle') || lowerMessage.includes('glow')) {
-                return `✨ <strong>SKINCARE EXPERT SECRETS:</strong><br><br>
-                        <strong>🧴 Home Skincare Reality:</strong><br>
-                        Over-the-counter products only work on the surface. Real transformation happens with professional treatments that penetrate deeper skin layers!<br><br>
+            // Advanced Skincare Professional Consultation
+            if (lowerMessage.includes('skin') || lowerMessage.includes('acne') || lowerMessage.includes('wrinkle') || lowerMessage.includes('glow') || lowerMessage.includes('blackhead') || lowerMessage.includes('pore') || lowerMessage.includes('aging')) {
+                // Acne-specific professional advice
+                if (lowerMessage.includes('acne') || lowerMessage.includes('pimple') || lowerMessage.includes('blackhead') || lowerMessage.includes('breakout')) {
+                    return `🔬 <strong>PROFESSIONAL ACNE TREATMENT EXPERTISE:</strong><br><br>
+                            <strong>💡 Expert Insight:</strong> For acne-prone skin, consistent deep cleansing and professional treatments are key. Avoid over-washing which can stimulate more oil production.<br><br>
+                            
+                            <strong>🎯 Our Acne Solutions:</strong><br>
+                            • Anti-Acne Facial Treatment (₱550): Specialized deep cleaning to reduce breakouts<br>
+                            • Diamond Peel (₱400): Gentle exfoliation for clogged pores<br>
+                            • All-In Facial (₱900): Comprehensive acne management<br><br>
+                            
+                            <strong>💫 Professional Advantage:</strong> Our treatments use medical-grade products that penetrate deeper than home care to target root causes.<br><br>
+                            
+                            Ready to achieve clearer skin? Contact us at 0917 124 4358 or follow Salon del MEN do on Facebook for acne-fighting tips! ✨`;
+                }
+                
+                // Anti-aging specific advice
+                if (lowerMessage.includes('aging') || lowerMessage.includes('wrinkle') || lowerMessage.includes('fine line') || lowerMessage.includes('sag')) {
+                    return `⏰ <strong>ANTI-AGING PROFESSIONAL EXPERTISE:</strong><br><br>
+                            <strong>💡 Professional Truth:</strong> Anti-aging isn't just about products - professional treatments can stimulate collagen production and improve skin elasticity more effectively than home care alone.<br><br>
+                            
+                            <strong>🌟 Age-Defying Treatments:</strong><br>
+                            • Anti-Aging Treatment (₱700): Reduces fine lines and restores youthful glow<br>
+                            • Pico Treatment (₱1,500): Advanced collagen stimulation technology<br>
+                            • RF Skin Tightening (₱1,000-1,500): Non-surgical firming for face and body<br><br>
+                            
+                            <strong>✨ Salon Secret:</strong> Combining multiple anti-aging treatments gives exponentially better results than single treatments!<br><br>
+                            
+                            Turn back time on your skin! Book your consultation today at salondelmendo@gmail.com or visit us to discuss your anti-aging goals. 💫`;
+                }
+                
+                // Dull skin and brightening advice
+                if (lowerMessage.includes('dull') || lowerMessage.includes('glow') || lowerMessage.includes('bright') || lowerMessage.includes('radiant')) {
+                    return `✨ <strong>SKIN BRIGHTENING PROFESSIONAL SECRETS:</strong><br><br>
+                            <strong>💡 Expert Insight:</strong> Dull skin often needs professional exfoliation and hydration. Regular professional facials can remove dead skin cells and reveal brighter, more radiant skin.<br><br>
+                            
+                            <strong>🌟 Brightening Solutions:</strong><br>
+                            • Diamond Peel Treatment (₱400): Gentle exfoliation for immediate radiance<br>
+                            • Whitening Treatment (₱450): Brightens and evens skin tone<br>
+                            • Basic Facial (₱350): Hydration and glow restoration<br><br>
+                            
+                            <strong>💫 Professional Advantage:</strong> Our treatments provide instant glow plus long-term skin health benefits!<br><br>
+                            
+                            Ready to glow? Call 0917 124 4358 to schedule your brightening facial or check our Facebook page for before-and-after transformations! 🌟`;
+                }
+                
+                // Body skin tightening advice
+                if (lowerMessage.includes('sag') || lowerMessage.includes('loose') || lowerMessage.includes('tight') || lowerMessage.includes('body') || lowerMessage.includes('cellulite')) {
+                    return `💪 <strong>RF SKIN TIGHTENING EXPERTISE:</strong><br><br>
+                            <strong>💡 Professional Technology:</strong> RF (Radio Frequency) heats the deeper layers of skin to stimulate collagen production, resulting in tighter, firmer skin without surgery.<br><br>
+                            
+                            <strong>🎯 Targeted Body Treatments:</strong><br>
+                            • Arms: ₱1,000 (firm and tone)<br>
+                            • Tummy: ₱1,500 (tighten and contour)<br>
+                            • Thighs: ₱1,500 (smooth and firm)<br>
+                            • Back: ₱1,500 (overall tightening)<br><br>
+                            
+                            <strong>✨ Treatment Benefits:</strong> Non-invasive, no downtime, gradual natural-looking results over 2-3 months!<br><br>
+                            
+                            Ready to tighten and tone? Contact us at 0917 124 4358 to learn how RF treatments can transform your body confidence! 💫`;
+                }
+                
+                // General skincare advice
+                return `🧴 <strong>COMPREHENSIVE SKINCARE CONSULTATION:</strong><br><br>
+                        <strong>💡 Professional Reality:</strong> Over-the-counter products only work on the surface. Real transformation happens with professional treatments that penetrate deeper skin layers!<br><br>
                         
-                        <strong>🎯 Pro Solutions:</strong><br>
-                        • Acne Problems? Our Anti-Acne Treatment (₱550) targets root causes<br>
-                        • Aging Concerns? Pico Treatment (₱1,500) stimulates collagen production<br>
-                        • Dull Skin? Diamond Peel (₱400) reveals your natural radiance<br><br>
+                        <strong>✨ Our Facial Menu:</strong><br>
+                        • Basic Facial (₱350): Perfect introduction to professional care<br>
+                        • Diamond Peel (₱400): Advanced exfoliation and renewal<br>
+                        • Specialized Treatments (₱450-1,500): Targeted solutions for specific concerns<br><br>
                         
-                        <strong>💫 Salon Secret:</strong> Professional facials every 4-6 weeks maintain optimal skin health year-round!<br><br>
+                        <strong>🌟 Salon Secret:</strong> Professional facials every 4-6 weeks maintain optimal skin health year-round!<br><br>
                         
-                        Ready for glowing skin? Book your facial analysis: 0917 124 4358`;
+                        Ready for glowing skin? Book your facial analysis at 0917 124 4358 or follow Salon del MEN do on Facebook for skincare tips! ✨`;
             }
             
-            if (lowerMessage.includes('nail') || lowerMessage.includes('manicure') || lowerMessage.includes('polish')) {
-                return `💅 <strong>NAIL CARE EXPERT TIPS:</strong><br><br>
-                        <strong>🏠 Home Manicure Limitations:</strong><br>
-                        DIY nails chip within days because you lack professional-grade products and techniques. Our salon manicures last 2-3 weeks with proper application!<br><br>
+            // Professional Nail Care Consultation
+            if (lowerMessage.includes('nail') || lowerMessage.includes('manicure') || lowerMessage.includes('polish') || lowerMessage.includes('pedicure') || lowerMessage.includes('weak') || lowerMessage.includes('brittle') || lowerMessage.includes('footspa')) {
+                // Nail health and strengthening advice
+                if (lowerMessage.includes('weak') || lowerMessage.includes('brittle') || lowerMessage.includes('break') || lowerMessage.includes('growth')) {
+                    return `💪 <strong>PROFESSIONAL NAIL STRENGTHENING EXPERTISE:</strong><br><br>
+                            <strong>💡 Expert Insight:</strong> Healthy nails start with proper cuticle care and regular maintenance. Professional manicures not only look better but also promote nail health.<br><br>
+                            
+                            <strong>✨ Nail Strengthening Solutions:</strong><br>
+                            • Gel Polish Services (₱350-600): Protect natural nails while adding strength<br>
+                            • Soft Gel Extensions (₱1,500-1,700): Add length and durability<br>
+                            • Professional Cuticle Care: Prevents infections and promotes healthy growth<br><br>
+                            
+                            <strong>🌟 Professional Advantage:</strong> Our treatments use strengthening base coats and nourishing oils that home products can't match.<br><br>
+                            
+                            Ready for gorgeous, healthy nails? Book your manicure at 0917 124 4358 or follow Salon del MEN do on Facebook for nail art inspiration! 💫`;
+                }
+                
+                // Pedicure and foot care advice
+                if (lowerMessage.includes('pedicure') || lowerMessage.includes('foot') || lowerMessage.includes('footspa') || lowerMessage.includes('tired feet')) {
+                    return `🦶 <strong>PROFESSIONAL PEDICURE & FOOT CARE EXPERTISE:</strong><br><br>
+                            <strong>💡 Health Benefits:</strong> Regular pedicures aren't just about beauty - they promote foot health, prevent ingrown nails, and improve circulation.<br><br>
+                            
+                            <strong>🛁 Our Luxurious Foot Treatments:</strong><br>
+                            • Jelly Footspa (₱200-550): Ultimate relaxation and foot health<br>
+                            • Classic Pedicure (₱120): Essential foot care and polish<br>
+                            • Premium Gel Pedicure (₱400-600): Long-lasting color and protection<br><br>
+                            
+                            <strong>✨ Jelly Footspa Magic:</strong> Our signature treatment includes exfoliation, massage, and moisturizing for incredibly soft, healthy feet!<br><br>
+                            
+                            Your feet deserve the best care! Contact salondelmendo@gmail.com to book your relaxing footspa experience today. 🌟`;
+                }
+                
+                // General nail care advice
+                return `💅 <strong>PROFESSIONAL NAIL CARE MASTERY:</strong><br><br>
+                        <strong>🏠 DIY vs Professional Reality:</strong> DIY nails chip within days because you lack professional-grade products and techniques. Our salon manicures last 2-3 weeks with proper application!<br><br>
                         
-                        <strong>✨ Professional Difference:</strong><br>
-                        • Cuticle care that prevents infections<br>
-                        • Base coats that prevent staining<br>
-                        • Gel polishes that resist chipping<br>
-                        • Perfect shape for your lifestyle<br><br>
+                        <strong>✨ What Sets Us Apart:</strong><br>
+                        • Medical-grade cuticle care preventing infections<br>
+                        • Premium base coats preventing staining and damage<br>
+                        • Long-lasting gel polishes with chip-free guarantee<br>
+                        • Perfect nail shaping for your lifestyle and hands<br><br>
                         
-                        <strong>💡 Insider Tip:</strong> Our Blue Sky gel polish (₱550) has a 3-week chip-free guarantee!<br><br>
+                        <strong>💡 Insider Tip:</strong> Our Blue Sky gel polish (₱550-600) has a 3-week chip-free guarantee - perfect for busy lifestyles!<br><br>
                         
-                        Treat your nails right: 0917 124 4358`;
+                        Treat your nails right: 0917 124 4358 or check our Facebook for stunning nail art galleries! 💫`;
+            }
+            
+            // Eyebrow and eyelash enhancement advice
+            if (lowerMessage.includes('eyebrow') || lowerMessage.includes('eyelash') || lowerMessage.includes('threading') || lowerMessage.includes('extension') || lowerMessage.includes('eye shape')) {
+                if (lowerMessage.includes('eyebrow') || lowerMessage.includes('threading') || lowerMessage.includes('shape')) {
+                    return `🎯 <strong>EYEBROW SHAPING PROFESSIONAL EXPERTISE:</strong><br><br>
+                            <strong>💡 Expert Insight:</strong> Well-shaped eyebrows frame your face and can make you look years younger. Professional threading provides precise shaping that complements your facial features.<br><br>
+                            
+                            <strong>✨ Our Eyebrow Services:</strong><br>
+                            • Eyebrow Threading (₱150): Perfect shape for your face<br>
+                            • Upper/Lower Lip Threading (₱150 each): Clean, defined lines<br>
+                            • Eyebrow Tinting (₱250): Fuller, more defined brows<br>
+                            • Eyebrow Shaving (₱60): Quick maintenance option<br><br>
+                            
+                            <strong>🌟 Professional Advantage:</strong> We analyze your face shape to create the most flattering brow arch and thickness.<br><br>
+                            
+                            Frame your face perfectly! Call 0917 124 4358 for expert eyebrow shaping or check our Facebook for eyebrow transformation photos. 💫`;
+                }
+                
+                if (lowerMessage.includes('eyelash') || lowerMessage.includes('extension') || lowerMessage.includes('mascara')) {
+                    return `👁️ <strong>EYELASH EXTENSION MASTERY:</strong><br><br>
+                            <strong>💡 Beauty Secret:</strong> Eyelash extensions can eliminate the need for mascara while giving you fuller, longer lashes 24/7. Different styles create different eye shapes.<br><br>
+                            
+                            <strong>✨ Our Lash Services:</strong><br>
+                            • Classic Eyelash Extension (₱300): Natural, everyday enhancement<br>
+                            • Volumized Extension (₱500): Fuller, more dramatic look<br>
+                            • Cat or Fox Eye Extension (₱700): Trendy, eye-lifting effect<br><br>
+                            
+                            <strong>🔥 Trending Styles:</strong> Cat eye extensions are perfect for creating that lifted, youthful appearance that's so popular now!<br><br>
+                            
+                            Wake up with perfect lashes every day! Book your eyelash extension consultation at salondelmendo@gmail.com or visit us to see style options. ✨`;
+                }
+            }
+            
+            // Hair removal and waxing advice
+            if (lowerMessage.includes('unwanted hair') || lowerMessage.includes('hair removal') || lowerMessage.includes('smooth') || lowerMessage.includes('wax') || lowerMessage.includes('laser') || lowerMessage.includes('ingrown')) {
+                if (lowerMessage.includes('wax') || lowerMessage.includes('waxing')) {
+                    return `🕯️ <strong>PROFESSIONAL WAXING EXPERTISE:</strong><br><br>
+                            <strong>💡 Expert Insight:</strong> Regular waxing not only removes hair but also exfoliates skin, leading to smoother, softer results. Hair grows back finer and sparser over time.<br><br>
+                            
+                            <strong>✨ Comprehensive Waxing Services:</strong><br>
+                            • Women's Services (₱150-2,500): From lip to full body<br>
+                            • Men's Services (₱180-2,600): Specialized male waxing<br>
+                            • Popular Areas: Underarms, legs, Brazilian, facial hair<br><br>
+                            
+                            <strong>🌟 Professional Benefits:</strong> Less pain, better results, and longer-lasting smoothness compared to home methods.<br><br>
+                            
+                            Ready for silky smooth skin? Call 0917 124 4358 to schedule your waxing appointment or check our Facebook for special waxing packages! 💫`;
+                }
+                
+                if (lowerMessage.includes('laser') || lowerMessage.includes('permanent')) {
+                    return `⚡ <strong>LASER HAIR REMOVAL EXPERTISE:</strong><br><br>
+                            <strong>💡 Professional Technology:</strong> Laser hair removal offers permanent reduction with minimal discomfort. It's most effective on dark, coarse hair and requires multiple sessions for best results.<br><br>
+                            
+                            <strong>🎯 Targeted Treatments:</strong><br>
+                            • Facial Areas (₱500-1,700): Precise, gentle removal<br>
+                            • Body Areas (₱1,000-3,500): Large area efficiency<br>
+                            • Specialized Services: Tattoo and scar removal available<br><br>
+                            
+                            <strong>✨ Long-term Investment:</strong> While initial cost is higher, permanent results save money and time over years of shaving/waxing!<br><br>
+                            
+                            Invest in permanent hair removal! Contact us at salondelmendo@gmail.com for a laser consultation and pricing tailored to your needs. 🌟`;
+                }
+            }
+            
+            // Massage and wellness advice
+            if (lowerMessage.includes('stress') || lowerMessage.includes('tension') || lowerMessage.includes('sore') || lowerMessage.includes('relax') || lowerMessage.includes('massage') || lowerMessage.includes('tired')) {
+                return `💆‍♀️ <strong>THERAPEUTIC MASSAGE WELLNESS EXPERTISE:</strong><br><br>
+                        <strong>💡 Health Benefits:</strong> Regular massage therapy reduces stress hormones, improves circulation, and promotes better sleep. It's an investment in your overall health and well-being.<br><br>
+                        
+                        <strong>🌟 Our Massage Menu:</strong><br>
+                        • Signature Massage (₱500): Perfect for general relaxation<br>
+                        • Hot Stone Massage (₱600): Deep muscle relief and tension release<br>
+                        • Traditional Hilot (₱500): Cultural wellness experience<br>
+                        • Specialized Treatments: Hot compress, Ventosa, Ear candling<br><br>
+                        
+                        <strong>✨ Targeted Relief:</strong> Choose 30-minute focused massages (₱200) for specific areas like hands, feet, head, or back.<br><br>
+                        
+                        You deserve to unwind! Book your therapeutic massage at 0917 124 4358 or follow Salon del MEN do on Facebook for wellness tips and special offers. 🌿`;
             }
             
             // General beauty advice for any other tip request
-            return `💄 <strong>BEAUTY EXPERT CONSULTATION:</strong><br><br>
+            return `💄 <strong>COMPREHENSIVE BEAUTY CONSULTATION:</strong><br><br>
                     <strong>🌟 Universal Beauty Truth:</strong><br>
                     Real beauty comes from professional care that enhances your natural features. Home routines maintain, but salon treatments transform!<br><br>
                     
-                    <strong>✨ What We Recommend:</strong><br>
-                    • Monthly facials for healthy skin<br>
+                    <strong>✨ Our Professional Recommendations:</strong><br>
+                    • Monthly facials for optimal skin health<br>
                     • Quarterly hair treatments for damage prevention<br>
-                    • Professional nail care every 2-3 weeks<br>
-                    • Annual beauty consultations for personalized plans<br><br>
+                    • Bi-weekly nail care for polished appearance<br>
+                    • Regular massage therapy for wellness and stress relief<br><br>
                     
-                    <strong>💡 Free Beauty Assessment:</strong><br>
-                    Visit us for a complimentary consultation! Our experts will analyze your beauty needs and create a custom care plan.<br><br>
+                    <strong>💡 Complimentary Beauty Assessment:</strong><br>
+                    Visit us for a free consultation! Our experts will analyze your beauty needs and create a personalized care plan just for you.<br><br>
                     
-                    Book your beauty transformation: 0917 124 4358`;
+                    Ready for your beauty transformation? Call 0917 124 4358 or follow Salon del MEN do on Facebook for daily beauty inspiration! ✨`;
         }
         
         // Hair services queries
