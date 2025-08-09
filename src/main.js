@@ -284,40 +284,203 @@ document.addEventListener('DOMContentLoaded', function() {
     function generateResponse(message) {
         const lowerMessage = message.toLowerCase();
         
-        if (lowerMessage.includes('service') || lowerMessage.includes('hair') || lowerMessage.includes('nail') || lowerMessage.includes('beauty')) {
-            return `🌟 Great question! We offer comprehensive hair styling, nail care, and beauty treatments for both men and women. Our services include haircuts, coloring, manicures, pedicures, facials, and more. Would you like specific details about any service?`;
+        // Hair services queries
+        if (lowerMessage.includes('hair') && (lowerMessage.includes('price') || lowerMessage.includes('cost') || lowerMessage.includes('how much'))) {
+            return `💇‍♀️ <strong>HAIR SERVICES PRICING:</strong><br><br>
+                    <strong>💫 Hair Basics:</strong><br>
+                    • Haircut: ₱200+ (₱150 student/senior)<br>
+                    • Hair Blow Dry: ₱150+<br>
+                    • Hair Spa: ₱250+<br><br>
+                    
+                    <strong>🎨 Hair Color:</strong><br>
+                    • Classic (Men): ₱600+ | (Women): ₱800+<br>
+                    • Organic (Men): ₱800+ | (Women): ₱1,000+<br><br>
+                    
+                    <strong>🌟 Hair Treatments:</strong><br>
+                    • Keratin: ₱350+ | Botox: ₱1,000+<br>
+                    • Brazilian Treatments: ₱1,500-₱2,800<br><br>
+                    
+                    <strong>✨ Hair Rebond:</strong><br>
+                    • Classic: ₱1,000+ | Organic: ₱1,500+<br>
+                    • Premium: ₱2,000-₱3,500<br><br>
+                    
+                    Call 0917 124 4358 for exact pricing!`;
+        }
+        
+        // Nail services queries
+        if (lowerMessage.includes('nail') && (lowerMessage.includes('price') || lowerMessage.includes('cost') || lowerMessage.includes('how much'))) {
+            return `💅 <strong>NAIL SERVICES PRICING:</strong><br><br>
+                    <strong>✨ Basic Services:</strong><br>
+                    • Manicure w/ Classic Polish: ₱100<br>
+                    • Pedicure w/ Classic Polish: ₱120<br>
+                    • Jelly Footspa: ₱200<br><br>
+                    
+                    <strong>💎 Premium Services:</strong><br>
+                    • Gel Polish (Avatino): ₱350-₱400<br>
+                    • Gel Polish (Blue Sky): ₱550-₱600<br>
+                    • Soft Gel Extensions: ₱1,500+<br><br>
+                    
+                    <strong>🌟 Package Deals:</strong><br>
+                    • Jelly Footspa + Magic Gel Mani/Pedi: ₱450<br>
+                    • Complete Premium Package: ₱550<br><br>
+                    
+                    Book now: 0917 124 4358!`;
+        }
+        
+        // Massage services queries  
+        if (lowerMessage.includes('massage') && (lowerMessage.includes('price') || lowerMessage.includes('cost') || lowerMessage.includes('how much'))) {
+            return `💆‍♀️ <strong>MASSAGE SERVICES PRICING:</strong><br><br>
+                    <strong>🌟 Whole Body (1 hour):</strong><br>
+                    • Signature: ₱500 | Traditional Hilot: ₱500<br>
+                    • Hot Stone/Compress/Ventosa: ₱600<br><br>
+                    
+                    <strong>✋ Targeted Massage (30 mins):</strong><br>
+                    • Hand/Foot/Head/Back: ₱200 each<br>
+                    • Kids Massage (45 mins): ₱350<br><br>
+                    
+                    <strong>💫 Specialty:</strong><br>
+                    • Ear Candling + Head Massage: ₱350<br><br>
+                    
+                    Perfect for relaxation and wellness!`;
+        }
+        
+        // Facial services queries
+        if (lowerMessage.includes('facial') && (lowerMessage.includes('price') || lowerMessage.includes('cost') || lowerMessage.includes('how much'))) {
+            return `🧴 <strong>FACIAL TREATMENT PRICING:</strong><br><br>
+                    • Basic Facial: ₱350<br>
+                    • Diamond Peel: ₱400<br>
+                    • Whitening Treatment: ₱450<br>
+                    • Anti-Acne Treatment: ₱550<br>
+                    • Anti-Aging Treatment: ₱700<br>
+                    • All-In Facial: ₱900<br>
+                    • Pico Treatment: ₱1,500<br><br>
+                    
+                    Get glowing, healthy skin today!`;
+        }
+        
+        // Waxing services queries
+        if (lowerMessage.includes('wax') && (lowerMessage.includes('price') || lowerMessage.includes('cost') || lowerMessage.includes('how much'))) {
+            return `🕯️ <strong>WAXING SERVICES PRICING:</strong><br><br>
+                    <strong>👩 Women's Waxing:</strong><br>
+                    • Upper/Lower Lip: ₱150 | Underarms: ₱250<br>
+                    • Half Legs: ₱400 | Full Legs: ₱650<br>
+                    • Brazilian: ₱600 | Full Body: ₱2,500<br><br>
+                    
+                    <strong>👨 Men's Waxing:</strong><br>
+                    • Upper/Lower Lip: ₱180 | Underarms: ₱300<br>
+                    • Half Legs: ₱450 | Full Legs: ₱730<br>
+                    • Brazilian: ₱650 | Full Body: ₱2,600<br><br>
+                    
+                    Smooth, professional results!`;
+        }
+        
+        // Laser services queries
+        if (lowerMessage.includes('laser') && (lowerMessage.includes('price') || lowerMessage.includes('cost') || lowerMessage.includes('how much'))) {
+            return `⚡ <strong>LASER SERVICES PRICING:</strong><br><br>
+                    <strong>👩 Women's Laser Hair Removal:</strong><br>
+                    • Upper/Lower Lip: ₱500 | Underarm: ₱1,000<br>
+                    • Lower Legs: ₱2,000 | Full Legs: ₱3,000<br><br>
+                    
+                    <strong>👨 Men's Laser Hair Removal:</strong><br>
+                    • Upper/Lower Lip: ₱700 | Underarm: ₱1,500<br>
+                    • Lower Legs: ₱2,500 | Full Legs: ₱3,500<br><br>
+                    
+                    <strong>🎯 Specialized:</strong><br>
+                    • Tattoo Removal: ₱1,000+/session<br>
+                    • Scar Removal: ₱1,200+/session<br><br>
+                    
+                    Permanent hair reduction technology!`;
+        }
+        
+        // General service inquiry
+        if (lowerMessage.includes('service') || lowerMessage.includes('what do you offer')) {
+            return `🌟 <strong>SALON DEL MEN DO - COMPLETE SERVICES:</strong><br><br>
+                    💇‍♀️ <strong>Hair Services:</strong> Cuts, Colors, Treatments, Rebonding<br>
+                    💅 <strong>Nail Services:</strong> Manicures, Pedicures, Extensions<br>
+                    💆‍♀️ <strong>Massage Services:</strong> Full Body, Hot Stone, Hilot<br>
+                    🧴 <strong>Facial Treatments:</strong> Anti-aging, Whitening, Acne<br>
+                    🕯️ <strong>Waxing Services:</strong> Full body hair removal<br>
+                    ⚡ <strong>Laser Services:</strong> Hair removal, Tattoo removal<br>
+                    🎭 <strong>Makeup Services:</strong> Bridal, Special events<br><br>
+                    
+                    Ask about specific pricing for any service!`;
         }
         
         if (lowerMessage.includes('location') || lowerMessage.includes('address') || lowerMessage.includes('where') || lowerMessage.includes('hour')) {
-            return `📍 We're conveniently located in the heart of the city! Our hours are:<br><br>
+            return `📍 <strong>SALON DEL MEN DO LOCATION & HOURS:</strong><br><br>
+                    📞 <strong>Phone:</strong> 0917 124 4358<br>
+                    📧 <strong>Email:</strong> salondelmendo@gmail.com<br>
+                    📱 <strong>Facebook:</strong> Salon del MEN do<br><br>
+                    
+                    <strong>⏰ Operating Hours:</strong><br>
                     Monday - Friday: 9:00 AM - 7:00 PM<br>
                     Saturday: 9:00 AM - 6:00 PM<br>
                     Sunday: 10:00 AM - 5:00 PM<br><br>
-                    Need directions or want to call ahead?`;
+                    
+                    Call ahead to book your appointment!`;
         }
         
         if (lowerMessage.includes('book') || lowerMessage.includes('appointment') || lowerMessage.includes('schedule')) {
-            return `📅 I'd love to help you book an appointment! You can:<br><br>
-                    • Call us directly for immediate booking<br>
-                    • Use our contact form to request your preferred time<br>
+            return `📅 <strong>BOOK YOUR APPOINTMENT NOW!</strong><br><br>
+                    📞 <strong>Call:</strong> 0917 124 4358<br>
+                    📧 <strong>Email:</strong> salondelmendo@gmail.com<br>
+                    📱 <strong>Facebook:</strong> Salon del MEN do<br><br>
+                    
+                    <strong>💡 Booking Options:</strong><br>
+                    • Call directly for immediate booking<br>
+                    • Message us on Facebook<br>
                     • Walk-ins welcome (subject to availability)<br><br>
-                    What type of service are you interested in?`;
+                    
+                    Which service interests you today?`;
         }
         
         if (lowerMessage.includes('price') || lowerMessage.includes('cost') || lowerMessage.includes('how much')) {
-            return `💰 Our prices vary depending on the service. We offer competitive rates for all our treatments. For specific pricing, I recommend calling us directly or visiting in person for a personalized consultation. We also have special packages and seasonal promotions!`;
+            return `💰 <strong>SALON DEL MEN DO PRICING:</strong><br><br>
+                    We offer competitive pricing for all services! Here are some popular options:<br><br>
+                    
+                    💇‍♀️ <strong>Hair:</strong> Cuts from ₱150, Colors from ₱600<br>
+                    💅 <strong>Nails:</strong> Manicure from ₱100, Gel from ₱350<br>
+                    💆‍♀️ <strong>Massage:</strong> From ₱200 (30min) to ₱600 (1hr)<br>
+                    🧴 <strong>Facial:</strong> From ₱350 to ₱1,500<br><br>
+                    
+                    Ask about specific services for detailed pricing!<br>
+                    Call: 0917 124 4358`;
         }
         
         if (lowerMessage.includes('hello') || lowerMessage.includes('hi') || lowerMessage.includes('hey')) {
-            return `👋 Hello there! Welcome to Salon delMENdo! I'm here to help you with any questions about our services, booking, location, or anything else. How can I assist you today?`;
+            return `👋 <strong>Hello! Welcome to Salon del MEN do!</strong><br><br>
+                    I'm here to help you with:<br>
+                    • Service information & pricing<br>
+                    • Booking appointments<br>
+                    • Location & hours<br>
+                    • Special packages & promotions<br><br>
+                    
+                    What can I help you with today? 😊`;
         }
         
         if (lowerMessage.includes('thank') || lowerMessage.includes('thanks')) {
-            return `😊 You're very welcome! Is there anything else I can help you with today? We're always here to make your salon experience amazing!`;
+            return `😊 <strong>You're very welcome!</strong><br><br>
+                    Is there anything else I can help you with?<br>
+                    • More service information?<br>
+                    • Ready to book an appointment?<br>
+                    • Questions about our packages?<br><br>
+                    
+                    📞 Call us: 0917 124 4358<br>
+                    We're always here to make your salon experience amazing! ✨`;
         }
         
         // Default response
-        return `Thanks for your message! I'm here to help with information about our services, location, hours, and booking. You can also call us directly or visit us in person. What would you like to know more about?`;
+        return `Thanks for your message! 😊<br><br>
+                <strong>I can help you with:</strong><br>
+                • Complete service pricing & information<br>
+                • Booking appointments<br>
+                • Location & operating hours<br>
+                • Special packages & recommendations<br><br>
+                
+                📞 <strong>Call:</strong> 0917 124 4358<br>
+                📱 <strong>Facebook:</strong> Salon del MEN do<br><br>
+                
+                What would you like to know about our services?`;
     }
     
     // Send button click
