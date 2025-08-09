@@ -304,7 +304,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     • Classic: ₱1,000+ | Organic: ₱1,500+<br>
                     • Premium: ₱2,000-₱3,500<br><br>
                     
-                    Call 0917 124 4358 for exact pricing!`;
+                    Call 0917-1244358 for exact pricing!`;
         }
         
         // Nail services queries
@@ -324,7 +324,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     • Jelly Footspa + Magic Gel Mani/Pedi: ₱450<br>
                     • Complete Premium Package: ₱550<br><br>
                     
-                    Book now: 0917 124 4358!`;
+                    Book now: 0917-1244358!`;
         }
         
         // Massage services queries  
@@ -408,28 +408,40 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (lowerMessage.includes('location') || lowerMessage.includes('address') || lowerMessage.includes('where') || lowerMessage.includes('hour')) {
             return `📍 <strong>SALON DEL MEN DO LOCATION & HOURS:</strong><br><br>
-                    📞 <strong>Phone:</strong> 0917 124 4358<br>
-                    📧 <strong>Email:</strong> salondelmendo@gmail.com<br>
-                    📱 <strong>Facebook:</strong> Salon del MEN do<br><br>
+                    <strong>📍 Address:</strong><br>
+                    2nd Floor, Unit 2-1 & 2-3<br>
+                    EM Commercial Plaza (beside Petro Gazz)<br>
+                    Brgy. Gaya-gaya, San Jose Del Monte, Bulacan<br><br>
                     
                     <strong>⏰ Operating Hours:</strong><br>
-                    Monday - Friday: 9:00 AM - 7:00 PM<br>
-                    Saturday: 9:00 AM - 6:00 PM<br>
-                    Sunday: 10:00 AM - 5:00 PM<br><br>
+                    ☀️ Monday to Sunday<br>
+                    🕘 9:00 AM - 9:00 PM<br>
+                    (Open for walk-in customers!)<br><br>
                     
-                    Call ahead to book your appointment!`;
+                    <strong>📞 Contact Us:</strong><br>
+                    📲 0917-1244358<br>
+                    📧 salondelmendo@gmail.com<br><br>
+                    
+                    <strong>📱 Follow Us:</strong><br>
+                    📷 Instagram: @salon.delmendo<br>
+                    🎵 TikTok: @salon.delmendo`;
         }
         
         if (lowerMessage.includes('book') || lowerMessage.includes('appointment') || lowerMessage.includes('schedule')) {
             return `📅 <strong>BOOK YOUR APPOINTMENT NOW!</strong><br><br>
-                    📞 <strong>Call:</strong> 0917 124 4358<br>
+                    📞 <strong>Call:</strong> 0917-1244358<br>
                     📧 <strong>Email:</strong> salondelmendo@gmail.com<br>
-                    📱 <strong>Facebook:</strong> Salon del MEN do<br><br>
+                    📷 <strong>Instagram:</strong> @salon.delmendo<br>
+                    🎵 <strong>TikTok:</strong> @salon.delmendo<br><br>
                     
                     <strong>💡 Booking Options:</strong><br>
                     • Call directly for immediate booking<br>
-                    • Message us on Facebook<br>
-                    • Walk-ins welcome (subject to availability)<br><br>
+                    • Email us your preferred time<br>
+                    • Walk-ins welcome (9AM-9PM daily)<br><br>
+                    
+                    <strong>📍 Located at:</strong><br>
+                    EM Commercial Plaza, Brgy. Gaya-gaya<br>
+                    San Jose Del Monte, Bulacan<br><br>
                     
                     Which service interests you today?`;
         }
@@ -444,7 +456,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     🧴 <strong>Facial:</strong> From ₱350 to ₱1,500<br><br>
                     
                     Ask about specific services for detailed pricing!<br>
-                    Call: 0917 124 4358`;
+                    Call: 0917-1244358`;
         }
         
         // About salon queries
@@ -484,7 +496,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     • Ready to book an appointment?<br>
                     • Questions about our packages?<br><br>
                     
-                    📞 Call us: 0917 124 4358<br>
+                    📞 Call us: 0917-1244358<br>
                     We're always here to make your salon experience amazing! ✨`;
         }
         
@@ -496,7 +508,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 • Location & operating hours<br>
                 • Special packages & recommendations<br><br>
                 
-                📞 <strong>Call:</strong> 0917 124 4358<br>
+                📞 <strong>Call:</strong> 0917-1244358<br>
                 📱 <strong>Facebook:</strong> Salon del MEN do<br><br>
                 
                 What would you like to know about our services?`;
