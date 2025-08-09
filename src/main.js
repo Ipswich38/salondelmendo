@@ -476,6 +476,154 @@ document.addEventListener('DOMContentLoaded', function() {
                     Save more with our package deals!`;
         }
         
+        // Beauty tips and recommendations - Strategic salon encouragement
+        if (lowerMessage.includes('tip') || lowerMessage.includes('advice') || lowerMessage.includes('recommend') || lowerMessage.includes('help') || lowerMessage.includes('how to')) {
+            const beautyTips = [
+                // Hair care tips that lead to salon services
+                {
+                    condition: lowerMessage.includes('hair') || lowerMessage.includes('damage') || lowerMessage.includes('dry'),
+                    response: `💁‍♀️ <strong>HAIR CARE EXPERT TIPS:</strong><br><br>
+                            <strong>✨ For Damaged Hair:</strong><br>
+                            While deep conditioning at home helps, truly damaged hair needs professional intervention! Our <strong>Brazilian Keratin treatments</strong> (₱1,500+) can restore your hair's natural shine and strength from the inside out.<br><br>
+                            
+                            <strong>💡 Pro Tip:</strong> Heat styling without protection causes 80% of hair damage. Our stylists can teach you proper techniques during your next visit!<br><br>
+                            
+                            <strong>🌟 Salon Secret:</strong> Monthly professional treatments prevent 6 months of damage. Book a consultation to create your personalized hair recovery plan!<br><br>
+                            
+                            📞 Ready to transform your hair? Call 0917 124 4358`
+                },
+                {
+                    condition: lowerMessage.includes('color') || lowerMessage.includes('dye') || lowerMessage.includes('highlight'),
+                    response: `🎨 <strong>HAIR COLOR EXPERT ADVICE:</strong><br><br>
+                            <strong>⚠️ Home Coloring Risks:</strong><br>
+                            DIY hair color can cause uneven results, chemical burns, and irreversible damage. Our professional colorists use premium organic formulas that protect while beautifying!<br><br>
+                            
+                            <strong>✨ Salon Advantage:</strong><br>
+                            • Color matching to your skin tone<br>
+                            • Damage prevention techniques<br>
+                            • Long-lasting, vibrant results<br>
+                            • Expert color correction if needed<br><br>
+                            
+                            <strong>💡 Secret Formula:</strong> Our organic colors (₱800+) last 3x longer than drugstore brands while nourishing your hair!<br><br>
+                            
+                            Book your color consultation today: 0917 124 4358`
+                },
+                {
+                    condition: lowerMessage.includes('skin') || lowerMessage.includes('acne') || lowerMessage.includes('wrinkle') || lowerMessage.includes('glow'),
+                    response: `✨ <strong>SKINCARE EXPERT SECRETS:</strong><br><br>
+                            <strong>🧴 Home Skincare Reality:</strong><br>
+                            Over-the-counter products only work on the surface. Real transformation happens with professional treatments that penetrate deeper skin layers!<br><br>
+                            
+                            <strong>🎯 Pro Solutions:</strong><br>
+                            • Acne Problems? Our Anti-Acne Treatment (₱550) targets root causes<br>
+                            • Aging Concerns? Pico Treatment (₱1,500) stimulates collagen production<br>
+                            • Dull Skin? Diamond Peel (₱400) reveals your natural radiance<br><br>
+                            
+                            <strong>💫 Salon Secret:</strong> Professional facials every 4-6 weeks maintain optimal skin health year-round!<br><br>
+                            
+                            Ready for glowing skin? Book your facial analysis: 0917 124 4358`
+                },
+                {
+                    condition: lowerMessage.includes('nail') || lowerMessage.includes('manicure') || lowerMessage.includes('polish'),
+                    response: `💅 <strong>NAIL CARE EXPERT TIPS:</strong><br><br>
+                            <strong>🏠 Home Manicure Limitations:</strong><br>
+                            DIY nails chip within days because you lack professional-grade products and techniques. Our salon manicures last 2-3 weeks with proper application!<br><br>
+                            
+                            <strong>✨ Professional Difference:</strong><br>
+                            • Cuticle care that prevents infections<br>
+                            • Base coats that prevent staining<br>
+                            • Gel polishes that resist chipping<br>
+                            • Perfect shape for your lifestyle<br><br>
+                            
+                            <strong>💡 Insider Tip:</strong> Our Blue Sky gel polish (₱550) has a 3-week chip-free guarantee!<br><br>
+                            
+                            Treat your nails right: 0917 124 4358`
+                }
+            ];
+            
+            // Find matching tip or provide general beauty advice
+            for (let tip of beautyTips) {
+                if (tip.condition) {
+                    return tip.response;
+                }
+            }
+            
+            // General beauty advice
+            return `💄 <strong>BEAUTY EXPERT CONSULTATION:</strong><br><br>
+                    <strong>🌟 Universal Beauty Truth:</strong><br>
+                    Real beauty comes from professional care that enhances your natural features. Home routines maintain, but salon treatments transform!<br><br>
+                    
+                    <strong>✨ What We Recommend:</strong><br>
+                    • Monthly facials for healthy skin<br>
+                    • Quarterly hair treatments for damage prevention<br>
+                    • Professional nail care every 2-3 weeks<br>
+                    • Annual beauty consultations for personalized plans<br><br>
+                    
+                    <strong>💡 Free Beauty Assessment:</strong><br>
+                    Visit us for a complimentary consultation! Our experts will analyze your beauty needs and create a custom care plan.<br><br>
+                    
+                    Book your beauty transformation: 0917 124 4358`;
+        }
+        
+        // Enhanced interactive responses with personality
+        if (lowerMessage.includes('busy') || lowerMessage.includes('time') || lowerMessage.includes('schedule')) {
+            return `⏰ <strong>WE UNDERSTAND YOUR BUSY LIFESTYLE!</strong><br><br>
+                    <strong>🚀 Express Services Available:</strong><br>
+                    • Quick Manicure: 30 minutes<br>
+                    • Express Facial: 45 minutes<br>
+                    • Speed Blowdry: 20 minutes<br>
+                    • Lunch-break Threading: 15 minutes<br><br>
+                    
+                    <strong>📅 Flexible Scheduling:</strong><br>
+                    • Early morning slots: 9:00 AM<br>
+                    • Lunch appointments: 12:00-1:00 PM<br>
+                    • After-work slots until 9:00 PM<br>
+                    • Weekend availability<br><br>
+                    
+                    <strong>💡 Pro Tip:</strong> Book recurring appointments and we'll reserve your preferred time slot!<br><br>
+                    
+                    Let's find time that works for YOU: 0917 124 4358`;
+        }
+        
+        if (lowerMessage.includes('expensive') || lowerMessage.includes('cheap') || lowerMessage.includes('budget') || lowerMessage.includes('afford')) {
+            return `💰 <strong>QUALITY BEAUTY IS AN INVESTMENT!</strong><br><br>
+                    <strong>🎯 Value Perspective:</strong><br>
+                    One professional treatment = months of confidence and beauty! Compare: drugstore products cost ₱200-500 weekly with minimal results vs. our lasting transformations.<br><br>
+                    
+                    <strong>💎 Budget-Friendly Options:</strong><br>
+                    • Student/Senior Discounts: Up to 25% off<br>
+                    • Package Deals: Save ₱500-1,000<br>
+                    • Monthly Payment Plans available<br>
+                    • Group booking discounts<br><br>
+                    
+                    <strong>✨ Free Services:</strong><br>
+                    • Beauty consultations<br>
+                    • Hair analysis<br>
+                    • Skin assessment<br><br>
+                    
+                    <strong>🌟 Remember:</strong> You deserve to look and feel amazing! Let's work within your budget: 0917 124 4358`;
+        }
+        
+        if (lowerMessage.includes('scared') || lowerMessage.includes('nervous') || lowerMessage.includes('first time') || lowerMessage.includes('worried')) {
+            return `🤗 <strong>FIRST-TIME NERVES ARE TOTALLY NORMAL!</strong><br><br>
+                    <strong>💕 We're Here For You:</strong><br>
+                    Our team specializes in making first-timers feel comfortable and welcomed. You're in caring, professional hands!<br><br>
+                    
+                    <strong>✨ What to Expect:</strong><br>
+                    • Detailed consultation before any service<br>
+                    • Step-by-step explanation of processes<br>
+                    • You can stop or ask questions anytime<br>
+                    • Patch tests for sensitive skin<br><br>
+                    
+                    <strong>🌟 Comfort Guarantees:</strong><br>
+                    • No pressure, no judgment environment<br>
+                    • Professional, licensed technicians only<br>
+                    • Clean, sanitized tools and spaces<br>
+                    • Your comfort is our priority<br><br>
+                    
+                    Ready to feel beautiful? We'll take great care of you: 0917 124 4358`;
+        }
+        
         // General service inquiry
         if (lowerMessage.includes('service') || lowerMessage.includes('what do you offer')) {
             return `🌟 <strong>SALON DEL MEN DO - COMPLETE SERVICES:</strong><br><br>
@@ -564,26 +712,173 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         if (lowerMessage.includes('hello') || lowerMessage.includes('hi') || lowerMessage.includes('hey')) {
-            return `👋 <strong>Hello! Welcome to Salon del MEN do!</strong><br><br>
-                    <strong>🎉 Serving since October 28, 2022</strong><br><br>
-                    I'm here to help you with:<br>
-                    • Service information & pricing<br>
-                    • Booking appointments<br>
-                    • Location & hours<br>
-                    • Special packages & promotions<br><br>
+            const greetings = [
+                `👋 <strong>Hello gorgeous! Welcome to Salon del MEN do!</strong><br><br>
+                 <strong>🎉 Proudly serving since October 28, 2022</strong><br><br>
+                 I'm your personal beauty consultant! Ready to help you discover:<br>
+                 • Perfect services for your beauty goals 💄<br>
+                 • Expert recommendations & insider tips ✨<br>
+                 • Easy appointment booking 📅<br>
+                 • Exclusive package deals & promotions 🎁<br><br>
+                 
+                 What beauty transformation are you dreaming of today? 😍`,
+                
+                `🌟 <strong>Hey there, beautiful! You've found your beauty destination!</strong><br><br>
+                 <strong>💕 2+ years of making people feel amazing!</strong><br><br>
+                 I'm here to be your beauty guide for:<br>
+                 • Personalized service recommendations 🎯<br>
+                 • Professional beauty tips & advice 💡<br>
+                 • Quick booking assistance 📲<br>
+                 • Money-saving package options 💰<br><br>
+                 
+                 Ready to glow up? What's your beauty priority today? ✨`,
+                
+                `🎉 <strong>Welcome to your beauty transformation headquarters!</strong><br><br>
+                 <strong>🏆 Bulacan's premier salon since 2022</strong><br><br>
+                 As your beauty advisor, I'm excited to help with:<br>
+                 • Tailored beauty solutions just for you 🎨<br>
+                 • Professional insights & recommendations 🔍<br>
+                 • Seamless appointment scheduling ⏰<br>
+                 • Special offers & exclusive deals 🌈<br><br>
+                 
+                 Let's make you look and feel incredible! What brings you here today? 💖`
+            ];
+            
+            return greetings[Math.floor(Math.random() * greetings.length)];
+        }
+        
+        // Enhanced emotional support responses
+        if (lowerMessage.includes('sad') || lowerMessage.includes('depressed') || lowerMessage.includes('down') || lowerMessage.includes('upset')) {
+            return `💝 <strong>WE'RE HERE TO LIFT YOUR SPIRITS!</strong><br><br>
+                    <strong>✨ Beauty Therapy Sessions:</strong><br>
+                    Sometimes we all need a little self-care to feel better. Our relaxing treatments are designed to pamper your body AND soul!<br><br>
                     
-                    What can I help you with today? 😊`;
+                    <strong>🌈 Mood-Boosting Services:</strong><br>
+                    • Relaxing Full Body Massage: ₱500-600<br>
+                    • Rejuvenating Facial Treatment: ₱350+<br>
+                    • Pampering Manicure/Pedicure: ₱100+<br>
+                    • Confidence-Boosting Hair Makeover: ₱200+<br><br>
+                    
+                    <strong>💕 You Deserve This:</strong><br>
+                    Taking care of yourself isn't selfish - it's necessary! Let our caring team help you feel beautiful inside and out.<br><br>
+                    
+                    Ready for some self-love? 0917 124 4358 💖`;
+        }
+        
+        if (lowerMessage.includes('special') || lowerMessage.includes('event') || lowerMessage.includes('wedding') || lowerMessage.includes('party')) {
+            return `🎊 <strong>SPECIAL OCCASION BEAUTY EXPERT!</strong><br><br>
+                    <strong>✨ Make Your Day Unforgettable:</strong><br>
+                    Every special moment deserves professional beauty! We specialize in making you look absolutely stunning for life's biggest celebrations.<br><br>
+                    
+                    <strong>👰 Bridal Beauty Packages:</strong><br>
+                    • Hair & Makeup: ₱1,000+ (Women) | ₱800+ (Men)<br>
+                    • Trial sessions available<br>
+                    • Group booking discounts<br>
+                    • Touch-up services<br><br>
+                    
+                    <strong>🎉 Event Services:</strong><br>
+                    • Graduation ceremonies<br>
+                    • Birthday celebrations<br>
+                    • Corporate events<br>
+                    • Date nights<br><br>
+                    
+                    <strong>💡 Pro Tip:</strong> Book 2-3 weeks in advance for premium time slots!<br><br>
+                    
+                    Let's make your special day perfect: 0917 124 4358 ✨`;
+        }
+        
+        // Weather-based beauty recommendations
+        if (lowerMessage.includes('weather') || lowerMessage.includes('summer') || lowerMessage.includes('rainy') || lowerMessage.includes('hot')) {
+            return `🌤️ <strong>WEATHER-PROOF BEAUTY SOLUTIONS!</strong><br><br>
+                    <strong>☀️ Hot Weather Challenges:</strong><br>
+                    Humidity ruins makeup, sweat damages hair, and sun exposure ages skin. Our professional treatments create weather-resistant beauty!<br><br>
+                    
+                    <strong>💧 Rainy Season Protection:</strong><br>
+                    • Keratin Treatments: Frizz-proof hair for 6 months<br>
+                    • Waterproof Gel Polish: Rain-resistant nails<br>
+                    • Long-lasting Makeup: Event-proof application<br><br>
+                    
+                    <strong>🌟 All-Weather Services:</strong><br>
+                    • Brazilian Blowouts for humidity control<br>
+                    • UV-protective facials for sun damage<br>
+                    • Sweat-proof makeup techniques<br><br>
+                    
+                    Don't let weather ruin your beauty: 0917 124 4358`;
+        }
+        
+        // Enhanced personality responses
+        if (lowerMessage.includes('beautiful') || lowerMessage.includes('pretty') || lowerMessage.includes('gorgeous')) {
+            return `💖 <strong>YOU'RE ABSOLUTELY RIGHT TO WANT TO FEEL BEAUTIFUL!</strong><br><br>
+                    <strong>✨ Beauty Confidence Boosters:</strong><br>
+                    True beauty radiates from feeling confident and well-cared for. Our services are designed to enhance your natural gorgeousness!<br><br>
+                    
+                    <strong>🌟 Instant Confidence Services:</strong><br>
+                    • Eyebrow Shaping: ₱150 (instant face lift!)<br>
+                    • Express Blowdry: ₱150 (bouncy, voluminous hair)<br>
+                    • Quick Manicure: ₱100 (polished fingertips)<br>
+                    • Lip Threading: ₱150 (perfect pout)<br><br>
+                    
+                    <strong>💫 Remember:</strong> You're already beautiful - we just help you feel it! <br><br>
+                    
+                    Ready to glow even brighter? 0917 124 4358 ✨`;
+        }
+        
+        if (lowerMessage.includes('girlfriend') || lowerMessage.includes('friends') || lowerMessage.includes('group') || lowerMessage.includes('together')) {
+            return `👯‍♀️ <strong>GIRLS' DAY OUT PARADISE!</strong><br><br>
+                    <strong>🎉 Squad Beauty Goals:</strong><br>
+                    Nothing beats bonding over beauty treatments! We LOVE hosting groups and making your friendship moments extra special.<br><br>
+                    
+                    <strong>👭 Group Package Benefits:</strong><br>
+                    • 10% discount for 3+ people<br>
+                    • Coordinated appointment slots<br>
+                    • Group photos in our beauty corners<br>
+                    • Complimentary consultation for everyone<br><br>
+                    
+                    <strong>💕 Perfect for:</strong><br>
+                    • Bachelorette parties<br>
+                    • Birthday celebrations<br>
+                    • Friendship bonding days<br>
+                    • Pre-event prep sessions<br><br>
+                    
+                    Bring your squad and save together: 0917 124 4358 🥳`;
+        }
+        
+        // Seasonal and trending beauty responses
+        if (lowerMessage.includes('trend') || lowerMessage.includes('popular') || lowerMessage.includes('latest') || lowerMessage.includes('new')) {
+            return `🔥 <strong>2024 BEAUTY TRENDS - WE'VE GOT THEM ALL!</strong><br><br>
+                    <strong>💇‍♀️ Trending Hair Styles:</strong><br>
+                    • Korean-inspired cuts and colors<br>
+                    • Curtain bangs and face-framing layers<br>
+                    • Glossy, healthy hair treatments<br>
+                    • Balayage and natural highlights<br><br>
+                    
+                    <strong>💅 Nail Art Trends:</strong><br>
+                    • Minimalist gel designs<br>
+                    • Chrome and metallic finishes<br>
+                    • French tip variations<br>
+                    • Seasonal nail art<br><br>
+                    
+                    <strong>✨ Skincare Trends:</strong><br>
+                    • Glass skin facial treatments<br>
+                    • Anti-aging preventative care<br>
+                    • Natural glow enhancements<br><br>
+                    
+                    Stay ahead of trends with us: 0917 124 4358 📸`;
         }
         
         if (lowerMessage.includes('thank') || lowerMessage.includes('thanks')) {
-            return `😊 <strong>You're very welcome!</strong><br><br>
-                    Is there anything else I can help you with?<br>
-                    • More service information?<br>
-                    • Ready to book an appointment?<br>
-                    • Questions about our packages?<br><br>
+            return `😊 <strong>You're absolutely welcome, beautiful!</strong><br><br>
+                    <strong>🌟 Before You Go:</strong><br>
+                    • Ready to book that appointment? 📞<br>
+                    • Want to follow us for beauty tips? 📱<br>
+                    • Questions about package deals? 💝<br>
+                    • Need directions to our salon? 📍<br><br>
                     
-                    📞 Call us: 0917-1244358<br>
-                    We're always here to make your salon experience amazing! ✨`;
+                    📞 <strong>Call:</strong> 0917 124 4358<br>
+                    📷 <strong>Instagram:</strong> @salon.delmendo<br>
+                    🎵 <strong>TikTok:</strong> @salon.delmendo<br><br>
+                    
+                    We're always here to make your beauty dreams come true! ✨💖`;
         }
         
         // Default response
