@@ -286,7 +286,200 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('User message:', message);
         console.log('Lowercase message:', lowerMessage);
         
-        // Beauty tips and recommendations - PRIORITY over pricing queries
+        // PRICING QUERIES - HIGHEST PRIORITY
+        // Hair services pricing queries
+        if (lowerMessage.includes('hair') && (lowerMessage.includes('price') || lowerMessage.includes('cost') || lowerMessage.includes('how much'))) {
+            return `💇‍♀️ <strong>HAIR SERVICES PRICING:</strong><br><br>
+                    <strong>💫 Hair Basics:</strong><br>
+                    • Haircut: ₱200+ (₱150 student/senior)<br>
+                    • Hair Blow Dry: ₱150+<br>
+                    • Hair Shampoo: ₱50+<br>
+                    • Hair Spa: ₱250+<br><br>
+                    
+                    <strong>🎨 Hair Color:</strong><br>
+                    • Classic (Men): ₱600+ | (Women): ₱800+<br>
+                    • Organic (Men): ₱800+ | (Women): ₱1,000+<br><br>
+                    
+                    <strong>🌟 Hair Treatments:</strong><br>
+                    • Keratin: ₱350+ | Botox: ₱1,000+<br>
+                    • Semi de Lino: ₱550+<br>
+                    • Bleaching/Highlights: ₱800+<br><br>
+                    
+                    <strong>🇧🇷 Brazilian Treatments:</strong><br>
+                    • iCure Magic Keratin: ₱1,500+<br>
+                    • U Keratin: ₱1,500+<br>
+                    • U Colagent: ₱2,500+<br>
+                    • Cysteine: ₱2,800+<br><br>
+                    
+                    <strong>✨ Hair Rebond:</strong><br>
+                    • Classic: ₱1,000+ | Organic: ₱1,500+<br>
+                    • L'Oreal: ₱2,000+ | 3-in-1: ₱3,500+<br><br>
+                    
+                    Call 0917 124 4358 for exact pricing!`;
+        }
+        
+        // Nail services pricing queries
+        if (lowerMessage.includes('nail') && (lowerMessage.includes('price') || lowerMessage.includes('cost') || lowerMessage.includes('how much'))) {
+            return `💅 <strong>NAIL SERVICES PRICING:</strong><br><br>
+                    <strong>✨ Basic Services:</strong><br>
+                    • Manicure w/ Classic Polish: ₱100<br>
+                    • Manicure w/ Magic Gel: ₱150<br>
+                    • Pedicure w/ Classic Polish: ₱120<br>
+                    • Pedicure w/ Magic Gel: ₱150<br><br>
+                    
+                    <strong>🧖‍♀️ Jelly Footspa:</strong><br>
+                    • Jelly Footspa: ₱200<br>
+                    • + Classic Manicure/Pedicure: ₱350<br>
+                    • + Magic Gel Manicure/Pedicure: ₱450<br>
+                    • + Blue Sky Manicure/Pedicure: ₱550<br><br>
+                    
+                    <strong>💎 Gel Polish:</strong><br>
+                    • Avatino Gel (Mani): ₱350 | (Pedi): ₱400<br>
+                    • iTac Gel (Mani): ₱450 | (Pedi): ₱500<br>
+                    • Blue Sky Gel (Mani): ₱550 | (Pedi): ₱600<br>
+                    • Magnetic Gel Polish: ₱550<br><br>
+                    
+                    <strong>✨ Extensions & Removal:</strong><br>
+                    • Soft Gel Extension: ₱1,500<br>
+                    • + Design: ₱1,700<br>
+                    • Gel Removal: ₱15/nail<br>
+                    • Extension Removal: ₱20/nail<br><br>
+                    
+                    Book now: 0917 124 4358!`;
+        }
+        
+        // Massage services pricing queries  
+        if (lowerMessage.includes('massage') && (lowerMessage.includes('price') || lowerMessage.includes('cost') || lowerMessage.includes('how much'))) {
+            return `💆‍♀️ <strong>MASSAGE SERVICES PRICING:</strong><br><br>
+                    <strong>🌟 Whole Body (1 hour):</strong><br>
+                    • Signature: ₱500 | Traditional Hilot: ₱500<br>
+                    • Hot Stone/Compress/Ventosa: ₱600<br><br>
+                    
+                    <strong>✋ Targeted Massage (30 mins):</strong><br>
+                    • Hand/Foot/Head/Back: ₱200 each<br>
+                    • Kids Massage (45 mins): ₱350<br><br>
+                    
+                    <strong>💫 Specialty:</strong><br>
+                    • Ear Candling + Head Massage: ₱350<br><br>
+                    
+                    Perfect for relaxation and wellness!`;
+        }
+        
+        // Facial services pricing queries
+        if (lowerMessage.includes('facial') && (lowerMessage.includes('price') || lowerMessage.includes('cost') || lowerMessage.includes('how much'))) {
+            return `🧴 <strong>FACIAL TREATMENT PRICING:</strong><br><br>
+                    • Basic Facial: ₱350<br>
+                    • Diamond Peel: ₱400<br>
+                    • Whitening Treatment: ₱450<br>
+                    • Anti-Acne Treatment: ₱550<br>
+                    • Anti-Aging Treatment: ₱700<br>
+                    • All-In Facial: ₱900<br>
+                    • Pico Treatment: ₱1,500<br><br>
+                    
+                    Get glowing, healthy skin today!`;
+        }
+        
+        // Waxing services pricing queries
+        if (lowerMessage.includes('wax') && (lowerMessage.includes('price') || lowerMessage.includes('cost') || lowerMessage.includes('how much'))) {
+            return `🕯️ <strong>WAXING SERVICES PRICING:</strong><br><br>
+                    <strong>👩 Women's Waxing:</strong><br>
+                    • Upper/Lower Lip: ₱150 | Face: ₱250<br>
+                    • Underarms: ₱250 | Arms: ₱320<br>
+                    • Bikini: ₱280 | Brazilian: ₱600<br>
+                    • Chest: ₱280 | Back: ₱320<br>
+                    • Half Legs: ₱400 | Full Legs: ₱650<br>
+                    • Full Body: ₱2,500<br><br>
+                    
+                    <strong>👨 Men's Waxing:</strong><br>
+                    • Upper/Lower Lip: ₱180 | Face: ₱300<br>
+                    • Underarms: ₱300 | Arms: ₱370<br>
+                    • Bikini: ₱330 | Brazilian: ₱650<br>
+                    • Chest: ₱530 | Back: ₱530<br>
+                    • Half Legs: ₱450 | Full Legs: ₱730<br>
+                    • Full Body: ₱2,600<br><br>
+                    
+                    Smooth, professional results!`;
+        }
+        
+        // Laser services pricing queries
+        if (lowerMessage.includes('laser') && (lowerMessage.includes('price') || lowerMessage.includes('cost') || lowerMessage.includes('how much'))) {
+            return `⚡ <strong>LASER SERVICES PRICING:</strong><br><br>
+                    <strong>👩 Women's Laser Hair Removal:</strong><br>
+                    • Upper/Lower Lip: ₱500<br>
+                    • Underarm: ₱1,000<br>
+                    • Whole Face: ₱1,200<br>
+                    • Lower Legs: ₱2,000 | Full Legs: ₱3,000<br><br>
+                    
+                    <strong>👨 Men's Laser Hair Removal:</strong><br>
+                    • Upper/Lower Lip: ₱700<br>
+                    • Underarm: ₱1,500<br>
+                    • Whole Face: ₱1,700<br>
+                    • Lower Legs: ₱2,500 | Full Legs: ₱3,500<br><br>
+                    
+                    <strong>🎯 Specialized Services:</strong><br>
+                    • Tattoo Removal: ₱1,000+/session<br>
+                    • Scar Removal: ₱1,200+/session<br><br>
+                    
+                    <strong>💪 RF Skin Tightening:</strong><br>
+                    • Arms: ₱1,000 | Tummy: ₱1,500<br>
+                    • Thigh: ₱1,500 | Back: ₱1,500<br><br>
+                    
+                    Advanced technology for permanent results!`;
+        }
+        
+        // Threading services pricing queries
+        if ((lowerMessage.includes('threading') || lowerMessage.includes('eyebrow') || lowerMessage.includes('eyelash')) && (lowerMessage.includes('price') || lowerMessage.includes('cost') || lowerMessage.includes('how much'))) {
+            return `🧵 <strong>THREADING & EYEBROW SERVICES:</strong><br><br>
+                    <strong>✨ Eyebrow Services:</strong><br>
+                    • Eyebrow Threading: ₱150<br>
+                    • Upper Lip: ₱150 | Lower Lip: ₱150<br>
+                    • Eyebrow Shaving: ₱60<br>
+                    • Eyebrow Tint: ₱250<br><br>
+                    
+                    <strong>👁️ Eyelash Extensions:</strong><br>
+                    • Classic Eyelash Extension: ₱300<br>
+                    • Volumized Extension: ₱500<br>
+                    • Cat or Fox Eye Extension: ₱700<br><br>
+                    
+                    Perfect brows and lashes await!`;
+        }
+        
+        // Makeup services pricing queries
+        if (lowerMessage.includes('makeup') && (lowerMessage.includes('price') || lowerMessage.includes('cost') || lowerMessage.includes('how much'))) {
+            return `💄 <strong>HAIR & MAKEUP SERVICES:</strong><br><br>
+                    <strong>👩 Women's Services:</strong><br>
+                    • Hair & Makeup: ₱1,000+<br><br>
+                    
+                    <strong>👨 Men's Services:</strong><br>
+                    • Hair & Makeup: ₱800+<br><br>
+                    
+                    *Prices may vary based on complexity and event type*<br><br>
+                    
+                    Perfect for weddings, events & special occasions!`;
+        }
+        
+        // Hair package pricing queries
+        if ((lowerMessage.includes('package') || lowerMessage.includes('combo')) && lowerMessage.includes('hair') && (lowerMessage.includes('price') || lowerMessage.includes('cost') || lowerMessage.includes('how much'))) {
+            return `💇‍♀️ <strong>HAIR PACKAGE DEALS:</strong><br><br>
+                    <strong>🎨 Color + Treatment Packages:</strong><br>
+                    • Classic Color + Botox: ₱1,700<br>
+                    • Classic Color + U Keratin: ₱2,200<br>
+                    • Organic Color + Botox: ₱1,900<br>
+                    • Organic Color + U Colagent: ₱3,600<br><br>
+                    
+                    <strong>✨ Rebond + Treatment Packages:</strong><br>
+                    • Classic Rebond + Botox: ₱1,900<br>
+                    • Organic Rebond + Botox: ₱2,400<br>
+                    • Classic Rebond + Cysteine: ₱4,000<br><br>
+                    
+                    <strong>💫 Triple Combo (Rebond + Color + Treatment):</strong><br>
+                    • Classic Triple + Botox: ₱2,600<br>
+                    • Organic Triple + iCure: ₱3,900<br><br>
+                    
+                    Save more with our package deals!`;
+        }
+        
+        // Beauty tips and recommendations - AFTER pricing queries
         if ((lowerMessage.includes('tip') && !lowerMessage.includes('price')) || 
             (lowerMessage.includes('advice') && !lowerMessage.includes('cost')) || 
             (lowerMessage.includes('recommend') && !lowerMessage.includes('how much')) || 
@@ -605,198 +798,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     Visit us for a free consultation! Our experts will analyze your beauty needs and create a personalized care plan just for you.<br><br>
                     
                     Ready for your beauty transformation? Call 0917 124 4358 or follow Salon del MEN do on Facebook for daily beauty inspiration! ✨`;
-        }
-        
-        // Hair services queries
-        if (lowerMessage.includes('hair') && (lowerMessage.includes('price') || lowerMessage.includes('cost') || lowerMessage.includes('how much'))) {
-            return `💇‍♀️ <strong>HAIR SERVICES PRICING:</strong><br><br>
-                    <strong>💫 Hair Basics:</strong><br>
-                    • Haircut: ₱200+ (₱150 student/senior)<br>
-                    • Hair Blow Dry: ₱150+<br>
-                    • Hair Shampoo: ₱50+<br>
-                    • Hair Spa: ₱250+<br><br>
-                    
-                    <strong>🎨 Hair Color:</strong><br>
-                    • Classic (Men): ₱600+ | (Women): ₱800+<br>
-                    • Organic (Men): ₱800+ | (Women): ₱1,000+<br><br>
-                    
-                    <strong>🌟 Hair Treatments:</strong><br>
-                    • Keratin: ₱350+ | Botox: ₱1,000+<br>
-                    • Semi de Lino: ₱550+<br>
-                    • Bleaching/Highlights: ₱800+<br><br>
-                    
-                    <strong>🇧🇷 Brazilian Treatments:</strong><br>
-                    • iCure Magic Keratin: ₱1,500+<br>
-                    • U Keratin: ₱1,500+<br>
-                    • U Colagent: ₱2,500+<br>
-                    • Cysteine: ₱2,800+<br><br>
-                    
-                    <strong>✨ Hair Rebond:</strong><br>
-                    • Classic: ₱1,000+ | Organic: ₱1,500+<br>
-                    • L'Oreal: ₱2,000+ | 3-in-1: ₱3,500+<br><br>
-                    
-                    Call 0917-1244358 for exact pricing!`;
-        }
-        
-        // Nail services queries
-        if (lowerMessage.includes('nail') && (lowerMessage.includes('price') || lowerMessage.includes('cost') || lowerMessage.includes('how much'))) {
-            return `💅 <strong>NAIL SERVICES PRICING:</strong><br><br>
-                    <strong>✨ Basic Services:</strong><br>
-                    • Manicure w/ Classic Polish: ₱100<br>
-                    • Manicure w/ Magic Gel: ₱150<br>
-                    • Pedicure w/ Classic Polish: ₱120<br>
-                    • Pedicure w/ Magic Gel: ₱150<br><br>
-                    
-                    <strong>🧖‍♀️ Jelly Footspa:</strong><br>
-                    • Jelly Footspa: ₱200<br>
-                    • + Classic Manicure/Pedicure: ₱350<br>
-                    • + Magic Gel Manicure/Pedicure: ₱450<br>
-                    • + Blue Sky Manicure/Pedicure: ₱550<br><br>
-                    
-                    <strong>💎 Gel Polish:</strong><br>
-                    • Avatino Gel (Mani): ₱350 | (Pedi): ₱400<br>
-                    • iTac Gel (Mani): ₱450 | (Pedi): ₱500<br>
-                    • Blue Sky Gel (Mani): ₱550 | (Pedi): ₱600<br>
-                    • Magnetic Gel Polish: ₱550<br><br>
-                    
-                    <strong>✨ Extensions & Removal:</strong><br>
-                    • Soft Gel Extension: ₱1,500<br>
-                    • + Design: ₱1,700<br>
-                    • Gel Removal: ₱15/nail<br>
-                    • Extension Removal: ₱20/nail<br><br>
-                    
-                    Book now: 0917-1244358!`;
-        }
-        
-        // Massage services queries  
-        if (lowerMessage.includes('massage') && (lowerMessage.includes('price') || lowerMessage.includes('cost') || lowerMessage.includes('how much'))) {
-            return `💆‍♀️ <strong>MASSAGE SERVICES PRICING:</strong><br><br>
-                    <strong>🌟 Whole Body (1 hour):</strong><br>
-                    • Signature: ₱500 | Traditional Hilot: ₱500<br>
-                    • Hot Stone/Compress/Ventosa: ₱600<br><br>
-                    
-                    <strong>✋ Targeted Massage (30 mins):</strong><br>
-                    • Hand/Foot/Head/Back: ₱200 each<br>
-                    • Kids Massage (45 mins): ₱350<br><br>
-                    
-                    <strong>💫 Specialty:</strong><br>
-                    • Ear Candling + Head Massage: ₱350<br><br>
-                    
-                    Perfect for relaxation and wellness!`;
-        }
-        
-        // Facial services queries
-        if (lowerMessage.includes('facial') && (lowerMessage.includes('price') || lowerMessage.includes('cost') || lowerMessage.includes('how much'))) {
-            return `🧴 <strong>FACIAL TREATMENT PRICING:</strong><br><br>
-                    • Basic Facial: ₱350<br>
-                    • Diamond Peel: ₱400<br>
-                    • Whitening Treatment: ₱450<br>
-                    • Anti-Acne Treatment: ₱550<br>
-                    • Anti-Aging Treatment: ₱700<br>
-                    • All-In Facial: ₱900<br>
-                    • Pico Treatment: ₱1,500<br><br>
-                    
-                    Get glowing, healthy skin today!`;
-        }
-        
-        // Waxing services queries
-        if (lowerMessage.includes('wax') && (lowerMessage.includes('price') || lowerMessage.includes('cost') || lowerMessage.includes('how much'))) {
-            return `🕯️ <strong>WAXING SERVICES PRICING:</strong><br><br>
-                    <strong>👩 Women's Waxing:</strong><br>
-                    • Upper/Lower Lip: ₱150 | Face: ₱250<br>
-                    • Underarms: ₱250 | Arms: ₱320<br>
-                    • Bikini: ₱280 | Brazilian: ₱600<br>
-                    • Chest: ₱280 | Back: ₱320<br>
-                    • Half Legs: ₱400 | Full Legs: ₱650<br>
-                    • Full Body: ₱2,500<br><br>
-                    
-                    <strong>👨 Men's Waxing:</strong><br>
-                    • Upper/Lower Lip: ₱180 | Face: ₱300<br>
-                    • Underarms: ₱300 | Arms: ₱370<br>
-                    • Bikini: ₱330 | Brazilian: ₱650<br>
-                    • Chest: ₱530 | Back: ₱530<br>
-                    • Half Legs: ₱450 | Full Legs: ₱730<br>
-                    • Full Body: ₱2,600<br><br>
-                    
-                    Smooth, professional results!`;
-        }
-        
-        // Laser services queries
-        if (lowerMessage.includes('laser') && (lowerMessage.includes('price') || lowerMessage.includes('cost') || lowerMessage.includes('how much'))) {
-            return `⚡ <strong>LASER SERVICES PRICING:</strong><br><br>
-                    <strong>👩 Women's Laser Hair Removal:</strong><br>
-                    • Upper/Lower Lip: ₱500<br>
-                    • Underarm: ₱1,000<br>
-                    • Whole Face: ₱1,200<br>
-                    • Lower Legs: ₱2,000 | Full Legs: ₱3,000<br><br>
-                    
-                    <strong>👨 Men's Laser Hair Removal:</strong><br>
-                    • Upper/Lower Lip: ₱700<br>
-                    • Underarm: ₱1,500<br>
-                    • Whole Face: ₱1,700<br>
-                    • Lower Legs: ₱2,500 | Full Legs: ₱3,500<br><br>
-                    
-                    <strong>🎯 Specialized Services:</strong><br>
-                    • Tattoo Removal: ₱1,000+/session<br>
-                    • Scar Removal: ₱1,200+/session<br><br>
-                    
-                    <strong>💪 RF Skin Tightening:</strong><br>
-                    • Arms: ₱1,000 | Tummy: ₱1,500<br>
-                    • Thigh: ₱1,500 | Back: ₱1,500<br><br>
-                    
-                    Advanced technology for permanent results!`;
-        }
-        
-        // Threading services queries
-        if ((lowerMessage.includes('threading') || lowerMessage.includes('eyebrow') || lowerMessage.includes('eyelash')) && (lowerMessage.includes('price') || lowerMessage.includes('cost') || lowerMessage.includes('how much'))) {
-            return `🧵 <strong>THREADING & EYEBROW SERVICES:</strong><br><br>
-                    <strong>✨ Eyebrow Services:</strong><br>
-                    • Eyebrow Threading: ₱150<br>
-                    • Upper Lip: ₱150 | Lower Lip: ₱150<br>
-                    • Eyebrow Shaving: ₱60<br>
-                    • Eyebrow Tint: ₱250<br><br>
-                    
-                    <strong>👁️ Eyelash Extensions:</strong><br>
-                    • Classic Eyelash Extension: ₱300<br>
-                    • Volumized Extension: ₱500<br>
-                    • Cat or Fox Eye Extension: ₱700<br><br>
-                    
-                    Perfect brows and lashes await!`;
-        }
-        
-        // Makeup services queries
-        if (lowerMessage.includes('makeup') && (lowerMessage.includes('price') || lowerMessage.includes('cost') || lowerMessage.includes('how much'))) {
-            return `💄 <strong>HAIR & MAKEUP SERVICES:</strong><br><br>
-                    <strong>👩 Women's Services:</strong><br>
-                    • Hair & Makeup: ₱1,000+<br><br>
-                    
-                    <strong>👨 Men's Services:</strong><br>
-                    • Hair & Makeup: ₱800+<br><br>
-                    
-                    *Prices may vary based on complexity and event type*<br><br>
-                    
-                    Perfect for weddings, events & special occasions!`;
-        }
-        
-        // Hair package queries
-        if ((lowerMessage.includes('package') || lowerMessage.includes('combo')) && lowerMessage.includes('hair') && (lowerMessage.includes('price') || lowerMessage.includes('cost') || lowerMessage.includes('how much'))) {
-            return `💇‍♀️ <strong>HAIR PACKAGE DEALS:</strong><br><br>
-                    <strong>🎨 Color + Treatment Packages:</strong><br>
-                    • Classic Color + Botox: ₱1,700<br>
-                    • Classic Color + U Keratin: ₱2,200<br>
-                    • Organic Color + Botox: ₱1,900<br>
-                    • Organic Color + U Colagent: ₱3,600<br><br>
-                    
-                    <strong>✨ Rebond + Treatment Packages:</strong><br>
-                    • Classic Rebond + Botox: ₱1,900<br>
-                    • Organic Rebond + Botox: ₱2,400<br>
-                    • Classic Rebond + Cysteine: ₱4,000<br><br>
-                    
-                    <strong>💫 Triple Combo (Rebond + Color + Treatment):</strong><br>
-                    • Classic Triple + Botox: ₱2,600<br>
-                    • Organic Triple + iCure: ₱3,900<br><br>
-                    
-                    Save more with our package deals!`;
         }
         
         // Enhanced interactive responses with personality
