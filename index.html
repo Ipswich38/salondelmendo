@@ -1376,6 +1376,159 @@
             }
         }
 
+        /* Nail Services Section */
+        .nail-services {
+            padding: 8rem 0;
+            background: linear-gradient(135deg, #00ffff 0%, #ff0099 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nail-services::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at center, rgba(91, 155, 213, 0.08) 0%, transparent 70%);
+            animation: float 30s ease-in-out infinite reverse;
+        }
+
+        /* Reuse the same styles for nail services */
+        .nail-services .services-showcase {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+            align-items: start;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .nail-services .main-image-panel {
+            position: relative;
+            z-index: 2;
+        }
+
+        .nail-services .featured-image {
+            position: relative;
+            border-radius: 32px;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--electric-cyan) 0%, var(--hot-pink) 100%);
+            box-shadow: 
+                0 25px 80px rgba(0, 255, 255, 0.3),
+                0 15px 40px rgba(255, 0, 153, 0.25);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            height: 600px;
+        }
+
+        .nail-services .featured-image:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 
+                0 35px 100px rgba(0, 255, 255, 0.4),
+                0 25px 60px rgba(255, 0, 153, 0.35);
+        }
+
+        .nail-services .featured-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .nail-services .featured-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .nail-services .services-gallery-panel {
+            z-index: 2;
+            position: relative;
+        }
+
+        .nail-services .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1.2rem;
+            max-height: 600px;
+            overflow-y: auto;
+            padding-right: 0.5rem;
+        }
+
+        .nail-services .service-item {
+            position: relative;
+            aspect-ratio: 1;
+            border-radius: 20px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background: linear-gradient(135deg, var(--electric-cyan) 0%, var(--hot-pink) 100%);
+            box-shadow: 
+                0 8px 25px rgba(0, 255, 255, 0.2),
+                0 4px 15px rgba(255, 0, 153, 0.15);
+        }
+
+        .nail-services .service-item:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 
+                0 15px 40px rgba(0, 255, 255, 0.35),
+                0 10px 25px rgba(255, 0, 153, 0.25);
+        }
+
+        .nail-services .service-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .nail-services .service-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Responsive Design for Nail Services */
+        @media (max-width: 1200px) {
+            .nail-services .services-showcase {
+                grid-template-columns: 1fr 1.3fr;
+                gap: 3rem;
+            }
+            
+            .nail-services .featured-image {
+                height: 500px;
+            }
+            
+            .nail-services .services-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                max-height: 500px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nail-services {
+                padding: 4rem 0;
+            }
+            
+            .nail-services .services-showcase {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .nail-services .featured-image {
+                height: 400px;
+            }
+            
+            .nail-services .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+                max-height: 300px;
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nail-services .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
         /* Gallery Section */
         .gallery {
             padding: 8rem 0;
@@ -3230,6 +3383,133 @@
                             <img src="public/hairservices/f4271163-2804-4ce2-acc4-b83b6938fb13.jpeg" alt="Hair Service" loading="lazy">
                             <div class="service-overlay">
                                 <div class="service-icon">🔧</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Luxury Divider -->
+    <div class="luxury-divider"></div>
+
+    <!-- Nail Services Section -->
+    <section class="nail-services" id="nail-services">
+        <div class="container">
+            <h2 class="section-title">Nail Services</h2>
+            
+            <div class="services-showcase">
+                <!-- Main Image Panel (Left) -->
+                <div class="main-image-panel">
+                    <div class="featured-image">
+                        <img src="https://images.pexels.com/photos/3997379/pexels-photo-3997379.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop" alt="Professional Nail Services" id="main-nail-image">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <h3 id="main-nail-title">Professional Nail Services</h3>
+                                <p id="main-nail-description">Expert nail care and artistry</p>
+                                <div class="service-features">
+                                    <span class="feature-tag">💅 Expert Manicures</span>
+                                    <span class="feature-tag">🎨 Nail Art</span>
+                                    <span class="feature-tag">💫 Premium Care</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nail Gallery Panel (Right) -->
+                <div class="services-gallery-panel">
+                    <h3 class="gallery-title">Our Nail Transformations</h3>
+                    <div class="services-grid">
+                        <div class="service-item" onclick="updateNailMainImage('public/nailservices/4cd4d5c7-2a97-47fa-9032-dcfd5ace71e4.jpeg', 'Classic Manicure', 'Timeless elegance')">
+                            <img src="public/nailservices/4cd4d5c7-2a97-47fa-9032-dcfd5ace71e4.jpeg" alt="Nail Service" loading="lazy">
+                            <div class="service-overlay">
+                                <div class="service-icon">💅</div>
+                            </div>
+                        </div>
+                        
+                        <div class="service-item" onclick="updateNailMainImage('public/nailservices/4f22f343-f2da-443a-aba7-294c3cc9dfa8.jpeg', 'Gel Polish', 'Long-lasting shine')">
+                            <img src="public/nailservices/4f22f343-f2da-443a-aba7-294c3cc9dfa8.jpeg" alt="Nail Service" loading="lazy">
+                            <div class="service-overlay">
+                                <div class="service-icon">✨</div>
+                            </div>
+                        </div>
+                        
+                        <div class="service-item" onclick="updateNailMainImage('public/nailservices/6d5a8814-9d6b-43ed-b833-f0acc5976af3.jpeg', 'Nail Art Design', 'Creative expressions')">
+                            <img src="public/nailservices/6d5a8814-9d6b-43ed-b833-f0acc5976af3.jpeg" alt="Nail Service" loading="lazy">
+                            <div class="service-overlay">
+                                <div class="service-icon">🎨</div>
+                            </div>
+                        </div>
+                        
+                        <div class="service-item" onclick="updateNailMainImage('public/nailservices/85a7cdab-af72-449d-9a7b-9b821be3a375.jpeg', 'French Manicure', 'Classic sophistication')">
+                            <img src="public/nailservices/85a7cdab-af72-449d-9a7b-9b821be3a375.jpeg" alt="Nail Service" loading="lazy">
+                            <div class="service-overlay">
+                                <div class="service-icon">🤍</div>
+                            </div>
+                        </div>
+                        
+                        <div class="service-item" onclick="updateNailMainImage('public/nailservices/8602a076-2c7a-4dd2-8404-3baafdb9b197.jpeg', 'Pedicure Service', 'Complete foot care')">
+                            <img src="public/nailservices/8602a076-2c7a-4dd2-8404-3baafdb9b197.jpeg" alt="Nail Service" loading="lazy">
+                            <div class="service-overlay">
+                                <div class="service-icon">🦶</div>
+                            </div>
+                        </div>
+                        
+                        <div class="service-item" onclick="updateNailMainImage('public/nailservices/90330f08-53e5-4437-8972-e4d39005da22.jpeg', 'Acrylic Extensions', 'Length & strength')">
+                            <img src="public/nailservices/90330f08-53e5-4437-8972-e4d39005da22.jpeg" alt="Nail Service" loading="lazy">
+                            <div class="service-overlay">
+                                <div class="service-icon">💎</div>
+                            </div>
+                        </div>
+                        
+                        <div class="service-item" onclick="updateNailMainImage('public/nailservices/96419133-b5fd-49c1-b53b-f1979917ef6e.jpeg', 'Chrome Nails', 'Mirror finish')">
+                            <img src="public/nailservices/96419133-b5fd-49c1-b53b-f1979917ef6e.jpeg" alt="Nail Service" loading="lazy">
+                            <div class="service-overlay">
+                                <div class="service-icon">🪩</div>
+                            </div>
+                        </div>
+                        
+                        <div class="service-item" onclick="updateNailMainImage('public/nailservices/974bf0b6-6346-4997-92a2-92ff25a70af3.jpeg', 'Gradient Ombré', 'Beautiful transitions')">
+                            <img src="public/nailservices/974bf0b6-6346-4997-92a2-92ff25a70af3.jpeg" alt="Nail Service" loading="lazy">
+                            <div class="service-overlay">
+                                <div class="service-icon">🌈</div>
+                            </div>
+                        </div>
+                        
+                        <div class="service-item" onclick="updateNailMainImage('public/nailservices/a6974aab-9c49-438c-a888-1e6220e94e2f.jpeg', 'Bridal Nails', 'Wedding perfection')">
+                            <img src="public/nailservices/a6974aab-9c49-438c-a888-1e6220e94e2f.jpeg" alt="Nail Service" loading="lazy">
+                            <div class="service-overlay">
+                                <div class="service-icon">👰</div>
+                            </div>
+                        </div>
+                        
+                        <div class="service-item" onclick="updateNailMainImage('public/nailservices/afb69dbf-c7f2-4ab2-acc3-35ac36b2041c.jpeg', 'Nail Repair', 'Restoration service')">
+                            <img src="public/nailservices/afb69dbf-c7f2-4ab2-acc3-35ac36b2041c.jpeg" alt="Nail Service" loading="lazy">
+                            <div class="service-overlay">
+                                <div class="service-icon">🔧</div>
+                            </div>
+                        </div>
+                        
+                        <div class="service-item" onclick="updateNailMainImage('public/nailservices/bf95c22b-fc19-40d2-a431-8ea0a0464f8c.jpeg', 'Seasonal Designs', 'Trendy styles')">
+                            <img src="public/nailservices/bf95c22b-fc19-40d2-a431-8ea0a0464f8c.jpeg" alt="Nail Service" loading="lazy">
+                            <div class="service-overlay">
+                                <div class="service-icon">🍂</div>
+                            </div>
+                        </div>
+                        
+                        <div class="service-item" onclick="updateNailMainImage('public/nailservices/ed606b97-737a-417a-b598-6ab571475d37.jpeg', 'Nail Strengthening', 'Health & wellness')">
+                            <img src="public/nailservices/ed606b97-737a-417a-b598-6ab571475d37.jpeg" alt="Nail Service" loading="lazy">
+                            <div class="service-overlay">
+                                <div class="service-icon">🌿</div>
+                            </div>
+                        </div>
+                        
+                        <div class="service-item" onclick="updateNailMainImage('public/nailservices/fc28e126-2fdd-461c-b33b-2045d9497c98.jpeg', 'Luxury Spa Treatment', 'Premium experience')">
+                            <img src="public/nailservices/fc28e126-2fdd-461c-b33b-2045d9497c98.jpeg" alt="Nail Service" loading="lazy">
+                            <div class="service-overlay">
+                                <div class="service-icon">🌺</div>
                             </div>
                         </div>
                     </div>
