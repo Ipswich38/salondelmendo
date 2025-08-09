@@ -1,0 +1,3124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salon delMENdo - For Men and Women</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=SF+Pro+Display:wght@200;300;400;500;600;700&family=Avenir+Next:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Design System Integration */
+        @custom-variant dark (&:is(.dark *));
+
+        :root {
+          --font-size: 14px;
+          --background: #ffffff;
+          --foreground: #1a1a1a;
+          --card: #ffffff;
+          --card-foreground: #1a1a1a;
+          --popover: oklch(1 0 0);
+          --popover-foreground: oklch(0.145 0 0);
+          --primary: #4f46e5;
+          --primary-foreground: #ffffff;
+          --secondary: #f1f5f9;
+          --secondary-foreground: #1a1a1a;
+          --muted: #f8fafc;
+          --muted-foreground: #64748b;
+          --accent: #e0e7ff;
+          --accent-foreground: #1a1a1a;
+          --destructive: #dc2626;
+          --destructive-foreground: #ffffff;
+          --border: rgba(0, 0, 0, 0.1);
+          --input: transparent;
+          --input-background: #f3f3f5;
+          --switch-background: #cbced4;
+          --font-weight-medium: 500;
+          --font-weight-normal: 400;
+          --ring: #4f46e5;
+          --chart-1: oklch(0.646 0.222 41.116);
+          --chart-2: oklch(0.6 0.118 184.704);
+          --chart-3: oklch(0.398 0.07 227.392);
+          --chart-4: oklch(0.828 0.189 84.429);
+          --chart-5: oklch(0.769 0.188 70.08);
+          --radius: 0.625rem;
+          --sidebar: oklch(0.985 0 0);
+          --sidebar-foreground: oklch(0.145 0 0);
+          --sidebar-primary: #4f46e5;
+          --sidebar-primary-foreground: oklch(0.985 0 0);
+          --sidebar-accent: oklch(0.97 0 0);
+          --sidebar-accent-foreground: oklch(0.205 0 0);
+          --sidebar-border: oklch(0.922 0 0);
+          --sidebar-ring: oklch(0.708 0 0);
+          
+          /* Electric Blue to Hot Pink Gradient (from inspiration) */
+          --gradient-from: #00d4ff;
+          --gradient-via: #0099ff;
+          --gradient-to: #ff0066;
+          
+          /* Cyberpunk/Electric colors from inspiration */
+          --electric-cyan: #00ffff;
+          --hot-pink: #ff0099;
+          --neon-magenta: #ff0066;
+          --electric-blue: #0099ff;
+          --cyberpunk-pink: #ff0080;
+          --cyberpunk-magenta: #ff006b;
+          --cyberpunk-glow: rgba(255, 0, 128, 0.5);
+
+          /* Text size variables */
+          --text-2xl: 1.5rem;
+          --text-xl: 1.25rem;
+          --text-lg: 1.125rem;
+          --text-base: 1rem;
+        }
+
+        .dark {
+          --background: oklch(0.145 0 0);
+          --foreground: oklch(0.985 0 0);
+          --card: oklch(0.145 0 0);
+          --card-foreground: oklch(0.985 0 0);
+          --popover: oklch(0.145 0 0);
+          --popover-foreground: oklch(0.985 0 0);
+          --primary: #6366f1;
+          --primary-foreground: #ffffff;
+          --secondary: oklch(0.269 0 0);
+          --secondary-foreground: oklch(0.985 0 0);
+          --muted: oklch(0.269 0 0);
+          --muted-foreground: oklch(0.708 0 0);
+          --accent: oklch(0.269 0 0);
+          --accent-foreground: oklch(0.985 0 0);
+          --destructive: oklch(0.396 0.141 25.723);
+          --destructive-foreground: oklch(0.637 0.237 25.331);
+          --border: oklch(0.269 0 0);
+          --input: oklch(0.269 0 0);
+          --ring: oklch(0.439 0 0);
+          --font-weight-medium: 500;
+          --font-weight-normal: 400;
+          --chart-1: oklch(0.488 0.243 264.376);
+          --chart-2: oklch(0.696 0.17 162.48);
+          --chart-3: oklch(0.769 0.188 70.08);
+          --chart-4: oklch(0.627 0.265 303.9);
+          --chart-5: oklch(0.645 0.246 16.439);
+          --sidebar: oklch(0.205 0 0);
+          --sidebar-foreground: oklch(0.985 0 0);
+          --sidebar-primary: #6366f1;
+          --sidebar-primary-foreground: oklch(0.985 0 0);
+          --sidebar-accent: oklch(0.269 0 0);
+          --sidebar-accent-foreground: oklch(0.985 0 0);
+          --sidebar-border: oklch(0.269 0 0);
+          --sidebar-ring: oklch(0.439 0 0);
+          
+          /* Electric Blue to Hot Pink Gradient for dark mode */
+          --gradient-from: #00e1ff;
+          --gradient-via: #00aaff;
+          --gradient-to: #ff0080;
+          
+          /* Enhanced cyberpunk colors for dark mode */
+          --electric-cyan: #00ffff;
+          --hot-pink: #ff00aa;
+          --neon-magenta: #ff0080;
+          --electric-blue: #00aaff;
+          --cyberpunk-pink: #ff0099;
+          --cyberpunk-magenta: #ff0066;
+          --cyberpunk-glow: rgba(255, 0, 153, 0.7);
+        }
+
+        @theme inline {
+          --color-background: var(--background);
+          --color-foreground: var(--foreground);
+          --color-card: var(--card);
+          --color-card-foreground: var(--card-foreground);
+          --color-popover: var(--popover);
+          --color-popover-foreground: var(--popover-foreground);
+          --color-primary: var(--primary);
+          --color-primary-foreground: var(--primary-foreground);
+          --color-secondary: var(--secondary);
+          --color-secondary-foreground: var(--secondary-foreground);
+          --color-muted: var(--muted);
+          --color-muted-foreground: var(--muted-foreground);
+          --color-accent: var(--accent);
+          --color-accent-foreground: var(--accent-foreground);
+          --color-destructive: var(--destructive);
+          --color-destructive-foreground: var(--destructive-foreground);
+          --color-border: var(--border);
+          --color-input: var(--input);
+          --color-input-background: var(--input-background);
+          --color-switch-background: var(--switch-background);
+          --color-ring: var(--ring);
+          --color-chart-1: var(--chart-1);
+          --color-chart-2: var(--chart-2);
+          --color-chart-3: var(--chart-3);
+          --color-chart-4: var(--chart-4);
+          --color-chart-5: var(--chart-5);
+          --radius-sm: calc(var(--radius) - 4px);
+          --radius-md: calc(var(--radius) - 2px);
+          --radius-lg: var(--radius);
+          --radius-xl: calc(var(--radius) + 4px);
+          --color-sidebar: var(--sidebar);
+          --color-sidebar-foreground: var(--sidebar-foreground);
+          --color-sidebar-primary: var(--sidebar-primary);
+          --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+          --color-sidebar-accent: var(--sidebar-accent);
+          --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+          --color-sidebar-border: var(--sidebar-border);
+          --color-sidebar-ring: var(--sidebar-ring);
+          --color-gradient-from: var(--gradient-from);
+          --color-gradient-via: var(--gradient-via);
+          --color-gradient-to: var(--gradient-to);
+          --color-cyberpunk-pink: var(--cyberpunk-pink);
+          --color-cyberpunk-magenta: var(--cyberpunk-magenta);
+          --color-cyberpunk-glow: var(--cyberpunk-glow);
+        }
+
+        @layer base {
+          * {
+            border-color: var(--border);
+            outline-color: var(--ring);
+            outline-opacity: 0.5;
+          }
+        }
+
+        /**
+         * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+         */
+        @layer base {
+          :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+            h1 {
+              font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+              font-size: var(--text-2xl);
+              font-weight: 300;
+              line-height: 1.2;
+              letter-spacing: -0.04em;
+            }
+
+            h2 {
+              font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+              font-size: var(--text-xl);
+              font-weight: 300;
+              line-height: 1.3;
+              letter-spacing: -0.03em;
+            }
+
+            h3 {
+              font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+              font-size: var(--text-lg);
+              font-weight: 400;
+              line-height: 1.3;
+              letter-spacing: -0.02em;
+            }
+
+            h4 {
+              font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+              font-size: var(--text-base);
+              font-weight: 500;
+              line-height: 1.3;
+              letter-spacing: -0.01em;
+            }
+
+            p {
+              font-family: 'Inter', sans-serif;
+              font-size: var(--text-base);
+              font-weight: var(--font-weight-normal);
+              line-height: 1.6;
+              letter-spacing: -0.01em;
+            }
+
+            label {
+              font-size: var(--text-base);
+              font-weight: var(--font-weight-medium);
+              line-height: 1.5;
+            }
+
+            button {
+              font-family: 'Inter', sans-serif;
+              font-size: var(--text-base);
+              font-weight: 500;
+              line-height: 1.5;
+              letter-spacing: -0.01em;
+            }
+
+            input {
+              font-size: var(--text-base);
+              font-weight: var(--font-weight-normal);
+              line-height: 1.5;
+            }
+          }
+        }
+
+        html {
+          font-size: var(--font-size);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+            line-height: 1.6;
+            color: var(--foreground);
+            font-weight: 300;
+            letter-spacing: -0.015em;
+            background: 
+                linear-gradient(135deg, var(--gradient-from) 0%, var(--gradient-via) 50%, var(--gradient-to) 100%),
+                radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 0, 153, 0.1) 0%, transparent 50%);
+            background-attachment: fixed;
+            overflow-x: hidden;
+            font-weight: 400;
+            min-height: 100vh;
+            transition: all 0.3s ease;
+        }
+
+        .dark body {
+            background: 
+                linear-gradient(135deg, var(--gradient-from) 0%, var(--gradient-via) 50%, var(--gradient-to) 100%),
+                radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 0, 170, 0.15) 0%, transparent 50%);
+            background-attachment: fixed;
+        }
+
+
+        /* Floating Transparent Header */
+        header {
+            background: transparent;
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            border-bottom: none;
+            box-shadow: none;
+            height: auto;
+        }
+
+        .dark header {
+            background: transparent;
+            border-bottom: none;
+        }
+
+        header.scrolled {
+            padding: 0.75rem 0;
+            background: transparent;
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+            box-shadow: none;
+            border-bottom: none;
+            height: auto;
+        }
+
+        .dark header.scrolled {
+            background: transparent;
+            border-bottom: none;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            height: 100%;
+        }
+        
+        .nav-container {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .logo-background {
+            position: absolute;
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, 
+                var(--gradient-from) 0%, 
+                var(--gradient-via) 50%, 
+                var(--gradient-to) 100%);
+            border-radius: 50%;
+            opacity: 0.2;
+            filter: blur(15px);
+            transition: all 0.3s ease;
+            z-index: 0;
+        }
+
+        .logo img {
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            box-shadow: 
+                0 4px 20px rgba(0, 0, 0, 0.2),
+                0 0 0 2px rgba(255, 255, 255, 0.1);
+            object-fit: cover;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            filter: none;
+            position: relative;
+            z-index: 1;
+            transform: translateZ(0);
+        }
+        
+        .logo:hover .logo-background {
+            opacity: 0.25;
+            filter: blur(8px);
+            transform: scale(1.05);
+        }
+        
+        .logo:hover img {
+            transform: scale(1.05) translateY(-1px);
+            box-shadow: 
+                0 4px 16px rgba(0, 0, 0, 0.2),
+                0 0 0 1px rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+            background: rgba(100, 150, 255, 0.15);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            padding: 0.6rem 1.2rem;
+            border-radius: 24px;
+            border: 1px solid rgba(100, 150, 255, 0.2);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            margin: 0;
+            height: 52px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 400;
+            font-size: 0.95rem;
+            letter-spacing: -0.01em;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            padding: 0.6rem 1.2rem;
+            border-radius: 18px;
+            text-shadow: none;
+            height: 36px;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links a:hover {
+            color: white;
+            background: rgba(100, 150, 255, 0.3);
+            backdrop-filter: blur(10px);
+            transform: translateY(-1px);
+            text-shadow: none;
+            box-shadow: 0 2px 10px rgba(100, 150, 255, 0.4);
+        }
+
+        /* Contact Us CTA Button */
+        .contact-cta {
+            background: var(--hot-pink);
+            backdrop-filter: blur(10px) saturate(180%);
+            border: 1px solid rgba(255, 0, 153, 0.3);
+            border-radius: 20px;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 16px rgba(255, 0, 153, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            color: white;
+            font-weight: 500;
+            font-size: 0.9rem;
+            letter-spacing: -0.01em;
+            text-transform: uppercase;
+            text-decoration: none;
+            text-shadow: 
+                0 0 10px rgba(255, 255, 255, 0.8),
+                0 0 20px rgba(255, 0, 153, 0.6);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-cta:hover {
+            background: var(--neon-magenta);
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 8px 20px rgba(255, 0, 153, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.25);
+        }
+        .contact-cta:active {
+            transform: translateY(-1px) scale(1.01);
+            box-shadow: 0 2px 8px rgba(255, 0, 153, 0.3);
+        }
+
+
+        /* Modern Mobile Menu Toggle */
+        .mobile-menu-toggle {
+            display: none;
+            background: rgba(100, 150, 255, 0.15);
+            backdrop-filter: blur(30px) saturate(180%);
+            -webkit-backdrop-filter: blur(30px) saturate(180%);
+            border: 1px solid rgba(100, 150, 255, 0.25);
+            border-radius: 12px;
+            font-size: 1.5rem;
+            color: white;
+            cursor: pointer;
+            padding: 0.75rem;
+            transition: all 0.3s ease;
+            box-shadow: 
+                0 6px 24px rgba(0, 0, 0, 0.15),
+                0 2px 8px rgba(0, 0, 0, 0.1),
+                inset 0 2px 4px rgba(255, 255, 255, 0.2),
+                inset 0 -1px 2px rgba(0, 0, 0, 0.05);
+        }
+
+        .mobile-nav {
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(20px) saturate(200%);
+            -webkit-backdrop-filter: blur(20px) saturate(200%);
+            padding: 2rem;
+            z-index: 999;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 
+                0 12px 48px rgba(0, 0, 0, 0.4),
+                0 4px 16px rgba(0, 0, 0, 0.2);
+            transform: translateY(-100%);
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .mobile-nav.active {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+            animation: slideDown 0.3s ease;
+        }
+
+        .mobile-nav ul {
+            list-style: none;
+            text-align: center;
+        }
+
+        .mobile-nav li {
+            margin: 1rem 0;
+        }
+
+        .mobile-nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+            display: block;
+            padding: 1rem 1.5rem;
+            border-radius: 16px;
+            margin: 0.5rem 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(10px);
+            border: 1px solid transparent;
+        }
+
+        .mobile-nav a:hover {
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.15);
+            transform: translateX(8px);
+            box-shadow: 
+                0 4px 16px rgba(0, 0, 0, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('public/hairmakeupmodel.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            padding: 0;
+            margin-bottom: 2rem;
+        }
+
+        .hero-video-background {
+            display: none;
+        }
+
+        .hero-overlay {
+            display: none;
+        }
+
+        .dark .hero {
+            background: rgba(0, 0, 0, 0.2);
+            color: var(--foreground);
+        }
+
+        .hero-content {
+            max-width: 900px;
+            z-index: 3;
+            animation: fadeInUp 1s ease-out;
+            padding: 120px 2rem 2rem 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero-services-minimal {
+            max-width: 800px;
+            width: 100%;
+            z-index: 3;
+            padding: 0 2rem 60px 2rem;
+            text-align: center;
+        }
+
+        .services-subtitle-minimal {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: white;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .services-description-minimal {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1.5rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
+
+        .services-link {
+            color: var(--electric-cyan);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .services-link:hover {
+            color: var(--hot-pink);
+        }
+
+        .hero-services-tags {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .service-tag {
+            display: inline-block;
+            padding: 8px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            color: white;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .service-tag:hover {
+            background: rgba(0, 255, 255, 0.2);
+            border-color: rgba(0, 255, 255, 0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
+        }
+
+        .hero-services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+            justify-items: center;
+            align-items: stretch;
+        }
+
+        .hero-service-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(30px) saturate(180%);
+            -webkit-backdrop-filter: blur(30px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 2rem 1.5rem;
+            border-radius: 24px;
+            box-shadow: 
+                0 12px 40px rgba(0, 0, 0, 0.15),
+                0 4px 16px rgba(0, 0, 0, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            text-align: center;
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            min-height: 180px;
+            width: 100%;
+            max-width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .hero-service-card:hover::before {
+            left: 100%;
+        }
+
+        .hero-service-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            background: 
+                linear-gradient(135deg, 
+                    rgba(0, 255, 255, 0.12) 0%, 
+                    rgba(255, 0, 153, 0.12) 100%
+                );
+            border-color: rgba(0, 255, 255, 0.3);
+            backdrop-filter: blur(40px) saturate(200%);
+            box-shadow: 
+                0 20px 60px rgba(0, 255, 255, 0.25),
+                0 10px 30px rgba(255, 0, 153, 0.2),
+                0 0 50px rgba(0, 255, 255, 0.15),
+                inset 0 2px 4px rgba(255, 255, 255, 0.15);
+        }
+
+        .hero-service-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 1rem;
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            transition: all 0.4s ease;
+            flex-shrink: 0;
+        }
+
+        .hero-service-card:hover .hero-service-icon {
+            transform: scale(1.1) rotate(5deg);
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .hero-service-card h3 {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 1.1rem;
+            font-weight: 400;
+            margin: 0;
+            color: white;
+            letter-spacing: -0.01em;
+            line-height: 1.2;
+            text-align: center;
+        }
+
+        .services-subtitle {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 2.2rem;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .hero h1 {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 4.5rem;
+            font-weight: 200;
+            margin-bottom: 1rem;
+            letter-spacing: -0.04em;
+            line-height: 1.1;
+            color: white;
+            text-shadow: none;
+        }
+
+        .dark .hero h1 {
+            color: var(--foreground);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            letter-spacing: 0.5px;
+            line-height: 1.6;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .dark .hero p {
+            color: var(--foreground);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 16px 40px;
+            background: var(--hot-pink);
+            backdrop-filter: blur(10px) saturate(180%);
+            border: 1px solid rgba(255, 0, 153, 0.3);
+            color: white;
+            text-decoration: none;
+            border-radius: 28px;
+            font-weight: 500;
+            font-size: 1.1rem;
+            letter-spacing: -0.01em;
+            text-transform: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 6px 24px rgba(255, 0, 153, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            position: relative;
+            text-shadow: none;
+        }
+
+
+
+        .cta-button:hover {
+            background: var(--neon-magenta);
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 12px 40px rgba(255, 0, 153, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+        .cta-button:active {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 4px 16px rgba(255, 0, 153, 0.3);
+        }
+
+        /* Floating Elements */
+        .floating-shapes {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .shape:nth-child(1) {
+            width: 100px;
+            height: 100px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .shape:nth-child(2) {
+            width: 150px;
+            height: 150px;
+            top: 60%;
+            right: 10%;
+            animation-delay: 2s;
+        }
+
+        .shape:nth-child(3) {
+            width: 80px;
+            height: 80px;
+            bottom: 20%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+
+        /* Old Services Section - Now removed and combined with hero */
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Modern Section Spacing */
+        section {
+            margin: 6rem 0;
+            position: relative;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 3.2rem;
+            font-weight: 200;
+            margin-bottom: 3rem;
+            color: white;
+            position: relative;
+            letter-spacing: 0.5px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .dark .section-title {
+            color: var(--foreground);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--neon-pink), var(--cyber-blue));
+            border-radius: 2px;
+        }
+
+        /* Old service card styles - now replaced with hero-service-card */
+
+        /* About Section */
+        .about {
+            padding: 8rem 0;
+            background: linear-gradient(135deg, #ff0099 0%, #00ffff 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at center, rgba(232, 180, 184, 0.05) 0%, transparent 70%);
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 2.8rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            color: white;
+            letter-spacing: -0.03em;
+            text-shadow: none;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            color: white;
+            opacity: 0.95;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            font-weight: 400;
+            letter-spacing: 0.2px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .about-video {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            height: 450px;
+            background: linear-gradient(135deg, var(--electric-cyan) 0%, var(--hot-pink) 100%);
+            box-shadow: 
+                0 20px 60px rgba(0, 255, 255, 0.2),
+                0 10px 30px rgba(255, 0, 153, 0.2);
+            transition: all 0.4s ease;
+        }
+
+        .about-video:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 
+                0 30px 80px rgba(0, 255, 255, 0.3),
+                0 20px 60px rgba(255, 0, 153, 0.3);
+        }
+
+        .about-video::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, transparent 50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 2;
+        }
+
+        .about-video:hover::before {
+            opacity: 1;
+        }
+
+        .salon-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 24px;
+        }
+
+        .video-overlay {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            color: white;
+            z-index: 3;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .video-overlay h3 {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin: 0 0 8px 0;
+            letter-spacing: 0.3px;
+        }
+
+        .video-overlay p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            margin: 0;
+        }
+
+        .video-fallback {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            text-align: center;
+            color: white;
+            padding: 2rem;
+        }
+
+        .video-fallback h3 {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 1.8rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            letter-spacing: 0.3px;
+        }
+
+        .video-fallback p {
+            font-size: 1rem;
+            margin: 0.5rem 0;
+            opacity: 0.9;
+        }
+
+        .video-fallback .video-note {
+            font-size: 0.85rem;
+            opacity: 0.7;
+            margin-top: 1rem;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            padding: 8rem 0;
+            background: linear-gradient(135deg, #00ffff 0%, #ff0099 100%);
+            position: relative;
+        }
+
+        .gallery-filters {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 12px 28px;
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 25px;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            font-size: 0.95rem;
+            letter-spacing: 0.3px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .filter-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--electric-cyan), var(--hot-pink));
+            transition: left 0.4s ease;
+            z-index: -1;
+        }
+
+        .filter-btn:hover::before,
+        .filter-btn.active::before {
+            left: 0;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            color: white;
+            border-color: transparent;
+            transform: translateY(-2px);
+            box-shadow: 
+                0 8px 25px rgba(0, 255, 255, 0.4),
+                0 4px 15px rgba(255, 0, 153, 0.3);
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            position: relative;
+            aspect-ratio: 1;
+            border-radius: 24px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 10px 40px var(--shadow-light);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 60px var(--shadow-medium);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, var(--electric-cyan) 0%, var(--hot-pink) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1;
+        }
+
+        .gallery-item:hover::before {
+            opacity: 0.8;
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 2;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay h4 {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .gallery-overlay p {
+            font-size: 0.95rem;
+            text-align: center;
+            opacity: 0.9;
+        }
+
+        .gallery-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            background: rgba(255,255,255,0.2);
+            border: 2px solid rgba(255,255,255,0.5);
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            z-index: 3;
+        }
+
+        .gallery-item:hover .gallery-icon {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        /* Lightbox Modal */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            backdrop-filter: blur(10px);
+        }
+
+        .lightbox.active {
+            display: flex;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 90vw;
+            max-height: 90vh;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 25px 80px rgba(0,0,0,0.5);
+        }
+
+        .lightbox img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(0,0,0,0.5);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10001;
+        }
+
+        .lightbox-close:hover {
+            background: var(--neon-pink);
+            transform: scale(1.1);
+        }
+
+        .lightbox-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .lightbox-info h4 {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Chatbot Styles */
+        .chatbot-toggle {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 70px;
+            height: 70px;
+            background: var(--electric-blue);
+            border: 3px solid rgba(255, 255, 255, 0.4);
+            border-radius: 50%;
+            box-shadow: 
+                0 15px 60px rgba(0, 153, 255, 0.4),
+                0 8px 30px rgba(0, 153, 255, 0.3),
+                0 4px 15px rgba(0, 0, 0, 0.2),
+                inset 0 3px 6px rgba(255, 255, 255, 0.3),
+                inset 0 -2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            z-index: 9999;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            padding: 8px;
+            transform: translateZ(0);
+        }
+        
+        .chatbot-logo {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 
+                0 2px 8px rgba(0, 0, 0, 0.2),
+                inset 0 1px 2px rgba(255, 255, 255, 0.3);
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+        }
+
+        .chatbot-toggle:hover {
+            transform: scale(1.08) rotate(5deg) translateY(-2px) translateZ(0);
+            box-shadow: 
+                0 20px 80px rgba(0, 153, 255, 0.5),
+                0 12px 40px rgba(0, 153, 255, 0.4),
+                0 6px 20px rgba(0, 0, 0, 0.3),
+                inset 0 4px 8px rgba(255, 255, 255, 0.4),
+                inset 0 -3px 6px rgba(0, 0, 0, 0.15);
+            background: #0088ff;
+            border-color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .chatbot-toggle:hover .chatbot-logo {
+            transform: scale(1.05) translateZ(0);
+            border-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 
+                0 3px 12px rgba(0, 0, 0, 0.3),
+                inset 0 2px 4px rgba(255, 255, 255, 0.4);
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4));
+        }
+
+        .chatbot-toggle.active {
+            transform: rotate(45deg);
+        }
+
+        .chatbot-container {
+            position: fixed;
+            bottom: 110px;
+            right: 30px;
+            width: 360px;
+            height: 520px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(40px) saturate(180%);
+            -webkit-backdrop-filter: blur(40px) saturate(180%);
+            border-radius: 24px;
+            box-shadow: 
+                0 20px 60px rgba(0, 0, 0, 0.2),
+                0 8px 32px rgba(0, 0, 0, 0.15),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            display: none;
+            flex-direction: column;
+            z-index: 9998;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .chatbot-container.active {
+            display: flex;
+            animation: slideUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px) scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .chatbot-header {
+            background: var(--hot-pink);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            position: relative;
+            box-shadow: 
+                inset 0 2px 4px rgba(255, 255, 255, 0.2),
+                0 2px 8px rgba(255, 0, 153, 0.3);
+        }
+
+        .chatbot-header h3 {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        .chatbot-header p {
+            font-size: 0.85rem;
+            opacity: 0.9;
+            margin: 0.5rem 0 0 0;
+        }
+
+        .chatbot-messages {
+            flex: 1;
+            padding: 1rem;
+            overflow-y: auto;
+            max-height: 340px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .chatbot-message {
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.3s ease;
+        }
+
+        .message-bot {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+
+        .message-user {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .bot-avatar {
+            width: 36px;
+            height: 36px;
+            background: var(--electric-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            padding: 2px;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 
+                0 4px 16px rgba(0, 153, 255, 0.3),
+                0 2px 8px rgba(0, 0, 0, 0.15),
+                inset 0 2px 4px rgba(255, 255, 255, 0.3),
+                inset 0 -1px 2px rgba(0, 0, 0, 0.1);
+            transform: translateZ(0);
+        }
+        
+        .bot-avatar img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 
+                0 1px 4px rgba(0, 0, 0, 0.2),
+                inset 0 1px 2px rgba(255, 255, 255, 0.2);
+            filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.3));
+        }
+
+        .message-content {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 0.8rem 1rem;
+            border-radius: 18px;
+            max-width: 250px;
+            box-shadow: 
+                0 4px 16px rgba(0, 0, 0, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: #333;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            font-weight: 500;
+        }
+
+        .message-user .message-content {
+            background: var(--hot-pink);
+            color: white;
+            box-shadow: 
+                0 4px 16px rgba(255, 0, 153, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 0, 153, 0.3);
+            font-weight: 600;
+        }
+
+        .quick-replies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .quick-reply {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            padding: 0.5rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: var(--pure-white);
+            backdrop-filter: blur(10px);
+        }
+
+        .quick-reply:hover {
+            background: linear-gradient(135deg, var(--cyber-blue), var(--neon-pink));
+            color: var(--pure-white);
+            border-color: var(--cyber-blue);
+            box-shadow: var(--shadow-neon);
+        }
+
+        .chatbot-input {
+            display: flex;
+            padding: 1rem;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .chatbot-input input {
+            flex: 1;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            border-radius: 20px;
+            padding: 0.8rem 1rem;
+            font-size: 0.9rem;
+            outline: none;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            color: #333;
+            font-weight: 500;
+        }
+
+        .chatbot-input input:focus {
+            border-color: var(--hot-pink);
+            box-shadow: 
+                0 0 15px rgba(255, 0, 153, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.5);
+            background: rgba(255, 255, 255, 1);
+        }
+
+        .chatbot-input input::placeholder {
+            color: #666;
+            opacity: 0.8;
+        }
+
+        .chatbot-send {
+            background: var(--hot-pink);
+            border: 2px solid rgba(255, 0, 153, 0.3);
+            box-shadow: 
+                0 4px 16px rgba(255, 0, 153, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            width: 42px;
+            height: 42px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .chatbot-send:hover {
+            transform: scale(1.1);
+            background: var(--neon-magenta);
+            box-shadow: 
+                0 6px 24px rgba(255, 0, 153, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 0, 153, 0.5);
+        }
+
+        /* Typing indicator */
+        .typing-indicator {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem;
+            font-size: 0.8rem;
+            color: var(--pure-white);
+            opacity: 0.7;
+        }
+
+        .typing-dots {
+            display: flex;
+            gap: 2px;
+        }
+
+        .typing-dot {
+            width: 4px;
+            height: 4px;
+            background: var(--cyber-blue);
+            border-radius: 50%;
+            animation: typingBounce 1.4s infinite ease-in-out;
+        }
+
+        .typing-dot:nth-child(1) { animation-delay: -0.32s; }
+        .typing-dot:nth-child(2) { animation-delay: -0.16s; }
+
+        @keyframes typingBounce {
+            0%, 80%, 100% { transform: scale(0); }
+            40% { transform: scale(1); }
+        }
+
+        /* Animated chatbot preview message */
+        .chatbot-preview {
+            position: fixed;
+            bottom: 110px;
+            right: 90px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 25px;
+            padding: 12px 20px;
+            box-shadow: 
+                0 15px 35px rgba(0, 0, 0, 0.1),
+                0 5px 15px rgba(0, 0, 0, 0.08);
+            color: #333;
+            font-size: 0.9rem;
+            font-weight: 500;
+            white-space: nowrap;
+            transform: translateX(100px);
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 999;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .chatbot-preview.show {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .chatbot-preview::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            right: 25px;
+            width: 0;
+            height: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 8px solid rgba(255, 255, 255, 0.95);
+        }
+
+        /* Mobile responsiveness for chatbot */
+        @media (max-width: 768px) {
+            .chatbot-container {
+                width: 320px;
+                right: 20px;
+                bottom: 90px;
+            }
+            
+            .chatbot-toggle {
+                right: 20px;
+                bottom: 20px;
+            }
+
+            .chatbot-preview {
+                right: 70px;
+                font-size: 0.8rem;
+                max-width: 200px;
+                white-space: normal;
+            }
+        }
+
+        /* Address Link Styles */
+        .address-link {
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            padding: 0.5rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+        }
+        
+        .address-link:hover {
+            color: var(--electric-cyan);
+            background: rgba(0, 255, 255, 0.1);
+            border-color: rgba(0, 255, 255, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 
+                0 8px 25px rgba(0, 255, 255, 0.2),
+                0 0 15px rgba(0, 255, 255, 0.1);
+        }
+
+        /* Ensure sections after hero have proper background */
+        .gallery, .about, .contact {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Salon Name Styling with Logo Colors */
+        .salon-name {
+            display: inline;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        
+        .salon-name .del {
+            color: #E8B4B8; /* Light pink */
+        }
+        
+        .salon-name .men {
+            color: #40E0D0; /* Teal */
+        }
+        
+        .salon-name .do {
+            color: #E8B4B8; /* Light pink */
+        }
+
+        @media (max-width: 480px) {
+            .chatbot-container {
+                width: calc(100vw - 40px);
+                left: 20px;
+                right: 20px;
+                height: 450px;
+            }
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 8rem 0;
+            background: linear-gradient(135deg, #00ffff 0%, #ff0099 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(232, 180, 184, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(91, 155, 213, 0.1) 0%, transparent 50%);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info h2 {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 2.8rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            color: white;
+            letter-spacing: -0.03em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .contact-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-item h4 {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 0.5rem;
+            text-shadow: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            letter-spacing: 0.3px;
+        }
+
+        .contact-item p {
+            font-weight: 300;
+            letter-spacing: 0.2px;
+            line-height: 1.6;
+        }
+
+        .contact-item a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            font-weight: 400;
+        }
+
+        .contact-item a:hover {
+            color: white;
+            text-decoration: underline;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .contact-form {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(40px) saturate(180%);
+            -webkit-backdrop-filter: blur(40px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 
+                0 20px 60px rgba(0, 0, 0, 0.2),
+                0 8px 32px rgba(0, 0, 0, 0.15),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1),
+                inset 0 -1px 0 rgba(255, 255, 255, 0.05);
+            padding: 3rem;
+            border-radius: 32px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-form::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
+            border-radius: 24px;
+            pointer-events: none;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-form h3 {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+            letter-spacing: 0.2px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 16px 20px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.95);
+            color: #333;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 1rem;
+            font-weight: 500;
+            backdrop-filter: blur(10px);
+            box-shadow: 
+                0 2px 8px rgba(0, 0, 0, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.5);
+        }
+        
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #666;
+            opacity: 0.8;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--hot-pink);
+            box-shadow: 
+                0 0 20px rgba(255, 0, 153, 0.3),
+                0 4px 16px rgba(255, 0, 153, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 1);
+            transform: translateY(-1px);
+            color: #222;
+        }
+
+        .submit-btn {
+            background: var(--hot-pink);
+            border: 1px solid rgba(255, 0, 153, 0.3);
+            padding: 14px 28px;
+            border-radius: 24px;
+            color: white;
+            font-weight: 500;
+            font-size: 1rem;
+            letter-spacing: -0.01em;
+            text-transform: none;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            width: 100%;
+            position: relative;
+            box-shadow: 0 6px 20px rgba(255, 0, 153, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            text-shadow: none;
+            backdrop-filter: blur(10px) saturate(180%);
+        }
+
+
+        .submit-btn:hover {
+            background: var(--neon-magenta);
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 10px 30px rgba(255, 0, 153, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.25);
+        }
+        .submit-btn:active {
+            transform: translateY(-1px) scale(1.01);
+            box-shadow: 0 4px 12px rgba(255, 0, 153, 0.3);
+        }
+
+        /* Modern Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.08);
+            backdrop-filter: blur(40px) saturate(180%);
+            -webkit-backdrop-filter: blur(40px) saturate(180%);
+            color: rgba(255, 255, 255, 0.9);
+            text-align: center;
+            padding: 3rem 0 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            margin-top: 6rem;
+            box-shadow: 
+                0 -8px 32px rgba(0, 0, 0, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.05);
+        }
+        
+        footer p {
+            font-size: 0.95rem;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            opacity: 0.8;
+            margin: 0;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(2deg); }
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.8; }
+            50% { opacity: 1; }
+        }
+
+        @keyframes glow {
+            0% { 
+                text-shadow: 0 0 40px rgba(0, 212, 255, 0.6), 0 0 60px rgba(255, 107, 157, 0.4), 2px 2px 4px rgba(0,0,0,0.1); 
+            }
+            50% { 
+                text-shadow: 0 0 60px rgba(255, 107, 157, 0.8), 0 0 80px rgba(0, 212, 255, 0.6), 2px 2px 4px rgba(0,0,0,0.1); 
+            }
+            100% { 
+                text-shadow: 0 0 40px rgba(0, 212, 255, 0.6), 0 0 60px rgba(255, 107, 157, 0.4), 2px 2px 4px rgba(0,0,0,0.1); 
+            }
+        }
+
+        /* Premium Loading Animation */
+        .premium-loader {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .premium-loader::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+            animation: shimmer 2s infinite;
+        }
+
+        /* Luxury Dividers */
+        .luxury-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--neon-pink), var(--cyber-blue), transparent);
+            margin: 4rem auto;
+            max-width: 200px;
+            opacity: 0.6;
+        }
+
+        /* Enhanced Typography */
+        .hero h1, .section-title {
+            position: relative;
+        }
+
+        .hero h1::after, .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--neon-pink), var(--cyber-blue));
+            border-radius: 1px;
+            box-shadow: 0 0 8px rgba(74, 158, 255, 0.3);
+        }
+
+        /* Responsive Design */
+        
+        /* Large Desktops - 1440px and up */
+        @media (min-width: 1440px) {
+            .container {
+                max-width: 1400px;
+            }
+            
+            .hero h1 {
+                font-size: 5rem;
+            }
+            
+            .hero p {
+                font-size: 1.4rem;
+                max-width: 700px;
+                margin: 0 auto 2rem;
+            }
+            
+            .section-title {
+                font-size: 3.5rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 3rem;
+            }
+        }
+
+        /* Standard Desktop - 1024px to 1439px */
+        @media (min-width: 1024px) and (max-width: 1439px) {
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2.5rem;
+            }
+        }
+
+        /* Tablets (Landscape) - 768px to 1023px */
+        @media (min-width: 768px) and (max-width: 1023px) {
+            nav {
+                padding: 0 1.5rem;
+            }
+            
+            .hero h1 {
+                font-size: 3.8rem;
+            }
+            
+            .hero p {
+                font-size: 1.15rem;
+                max-width: 600px;
+                margin: 0 auto 2rem;
+            }
+            
+            .section-title {
+                font-size: 2.8rem;
+            }
+            
+            .hero-services-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 1.5rem;
+            }
+            
+            .about-content,
+            .contact-content {
+                gap: 3rem;
+            }
+            
+            .hero-service-card {
+                padding: 1.8rem;
+            }
+        }
+
+        /* Enhanced Map Container Styles */
+        .map-container {
+            position: relative;
+            height: 450px;
+            width: 100%;
+            margin-top: 2rem;
+            border-radius: 32px;
+            overflow: hidden;
+            background: linear-gradient(135deg, 
+                rgba(255, 0, 153, 0.1) 0%, 
+                rgba(6, 182, 212, 0.1) 50%, 
+                rgba(147, 51, 234, 0.1) 100%);
+            border: 2px solid rgba(255, 0, 153, 0.2);
+            backdrop-filter: blur(20px);
+            box-shadow: 
+                0 25px 50px -12px rgba(0, 0, 0, 0.25),
+                0 0 0 1px rgba(255, 255, 255, 0.1),
+                0 8px 32px rgba(255, 0, 153, 0.15),
+                0 16px 64px rgba(6, 182, 212, 0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateZ(0);
+        }
+
+        .map-container:hover {
+            transform: translateY(-4px) translateZ(0);
+            box-shadow: 
+                0 35px 70px -12px rgba(0, 0, 0, 0.35),
+                0 0 0 1px rgba(255, 255, 255, 0.2),
+                0 12px 48px rgba(255, 0, 153, 0.25),
+                0 24px 96px rgba(6, 182, 212, 0.15);
+            border-color: rgba(255, 0, 153, 0.3);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 32px;
+            filter: contrast(1.1) saturate(1.2) brightness(1.05);
+            transition: filter 0.3s ease;
+        }
+
+        .map-container:hover iframe {
+            filter: contrast(1.15) saturate(1.3) brightness(1.08);
+        }
+
+        .map-overlay {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 10;
+            background: linear-gradient(135deg, 
+                rgba(255, 0, 153, 0.9) 0%, 
+                rgba(255, 0, 153, 0.8) 100%);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 16px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            backdrop-filter: blur(10px);
+            box-shadow: 
+                0 10px 25px rgba(255, 0, 153, 0.3),
+                0 0 0 1px rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            animation: shimmer 3s ease-in-out infinite;
+        }
+
+        @keyframes shimmer {
+            0%, 100% {
+                box-shadow: 
+                    0 10px 25px rgba(255, 0, 153, 0.3),
+                    0 0 0 1px rgba(255, 255, 255, 0.2);
+            }
+            50% {
+                box-shadow: 
+                    0 15px 35px rgba(255, 0, 153, 0.4),
+                    0 0 0 1px rgba(255, 255, 255, 0.3),
+                    0 0 20px rgba(255, 0, 153, 0.2);
+            }
+        }
+
+        /* Map Responsive Styles */
+        @media (max-width: 768px) {
+            .map-container {
+                height: 300px;
+                margin-top: 1.5rem;
+            }
+            
+            .contact-cta {
+                padding: 10px 18px;
+                font-size: 0.85rem;
+                margin-left: 0.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .map-container {
+                height: 250px;
+            }
+            
+            .contact-cta {
+                padding: 8px 16px;
+                font-size: 0.8rem;
+            }
+            
+            .nav-container {
+                gap: 1rem;
+            }
+        }
+        
+        /* Tablets (Portrait) - 481px to 767px */
+        @media (min-width: 481px) and (max-width: 767px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .nav-container {
+                display: none;
+            }
+            
+            .mobile-menu-toggle {
+                display: block;
+            }
+            
+            .gallery-filters {
+                gap: 1rem;
+                margin-bottom: 3rem;
+            }
+            
+            .filter-btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+            
+            nav {
+                padding: 0 1rem;
+            }
+            
+            .logo img {
+                height: 75px;
+                width: 75px;
+            }
+            
+            .logo-background {
+                width: 85px;
+                height: 85px;
+            }
+            
+            .logo-text {
+                font-size: 1.6rem;
+            }
+            
+            .hero {
+                padding: 0 1rem;
+            }
+            
+            .hero h1 {
+                font-size: 3.2rem;
+                line-height: 1.1;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+                max-width: 90%;
+                margin: 0 auto 2rem;
+            }
+            
+            .cta-button {
+                padding: 16px 35px;
+                font-size: 0.95rem;
+            }
+            
+            .container {
+                padding: 0 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 2.4rem;
+                margin-bottom: 2.5rem;
+            }
+            
+            .services-subtitle {
+                font-size: 1.8rem;
+            }
+            
+            .hero-services-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                margin-top: 2rem;
+            }
+            
+            .hero-service-card {
+                padding: 1.5rem;
+            }
+            
+            .hero-service-card h3 {
+                font-size: 1.3rem;
+            }
+
+            .hero-service-icon {
+                width: 70px;
+                height: 70px;
+                font-size: 1.8rem;
+                margin-bottom: 1rem;
+            }
+            
+            .about,
+            .contact {
+                padding: 80px 0;
+            }
+            
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .about-text h2,
+            .contact-info h2 {
+                font-size: 2.4rem;
+            }
+            
+            .about-video {
+                height: 300px;
+                margin-top: 1rem;
+            }
+            
+            .contact-form {
+                padding: 1.5rem;
+            }
+        }
+
+        /* Large Smartphones - 376px to 480px */
+        @media (min-width: 376px) and (max-width: 480px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .nav-container {
+                display: none;
+            }
+            
+            .mobile-menu-toggle {
+                display: block;
+            }
+            
+            nav {
+                padding: 0 1rem;
+            }
+            
+            .logo img {
+                height: 70px;
+                width: 70px;
+            }
+            
+            .logo-background {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .logo-text {
+                font-size: 1.5rem;
+            }
+            
+            .hero {
+                padding: 0 1rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+                line-height: 1.1;
+                margin-bottom: 1.5rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+                margin-bottom: 2rem;
+            }
+            
+            .cta-button {
+                padding: 15px 30px;
+                font-size: 0.9rem;
+            }
+            
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+                margin-bottom: 2rem;
+            }
+            
+            .about,
+            .contact {
+                padding: 60px 0;
+            }
+            
+            .services-subtitle {
+                font-size: 1.6rem;
+            }
+            
+            .hero-services-grid {
+                gap: 1.5rem;
+                margin-top: 2rem;
+            }
+            
+            .hero-service-card {
+                padding: 1.5rem;
+            }
+            
+            .hero-service-icon {
+                width: 65px;
+                height: 65px;
+                font-size: 1.6rem;
+                margin-bottom: 1rem;
+            }
+            
+            .hero-service-card h3 {
+                font-size: 1.3rem;
+            }
+            
+            .hero-service-card p {
+                font-size: 0.9rem;
+            }
+            
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .about-text h2,
+            .contact-info h2 {
+                font-size: 2.2rem;
+            }
+            
+            .about-text p {
+                font-size: 1rem;
+            }
+            
+            .about-video {
+                height: 250px;
+            }
+            
+            .contact-form {
+                padding: 1.5rem;
+            }
+            
+            .contact-form h3 {
+                font-size: 1.6rem;
+            }
+            
+            .gallery-filters {
+                gap: 0.8rem;
+                margin-bottom: 2.5rem;
+            }
+            
+            .filter-btn {
+                padding: 8px 16px;
+                font-size: 0.85rem;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.2rem;
+            }
+            
+            .gallery-overlay h4 {
+                font-size: 1.3rem;
+            }
+            
+            .gallery-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Small Smartphones - 320px to 375px */
+        @media (max-width: 375px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .nav-container {
+                display: none;
+            }
+            
+            .mobile-menu-toggle {
+                display: block;
+            }
+            
+            nav {
+                padding: 0 0.8rem;
+            }
+            
+            .logo img {
+                height: 65px;
+                width: 65px;
+            }
+            
+            .logo-background {
+                width: 75px;
+                height: 75px;
+            }
+            
+            .logo-text {
+                font-size: 1.3rem;
+            }
+            
+            .hero {
+                padding: 0 0.8rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.4rem;
+                line-height: 1.1;
+                margin-bottom: 1rem;
+            }
+            
+            .hero p {
+                font-size: 0.95rem;
+                line-height: 1.5;
+                margin-bottom: 1.5rem;
+            }
+            
+            .cta-button {
+                padding: 14px 28px;
+                font-size: 0.85rem;
+            }
+            
+            .container {
+                padding: 0 0.8rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+                margin-bottom: 1.5rem;
+            }
+            
+            .about,
+            .contact {
+                padding: 50px 0;
+            }
+            
+            .services-subtitle {
+                font-size: 1.4rem;
+            }
+            
+            .hero-services-grid {
+                gap: 1.2rem;
+                margin-top: 1.5rem;
+            }
+            
+            .hero-service-card {
+                padding: 1.2rem;
+            }
+            
+            .hero-service-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.4rem;
+                margin-bottom: 1rem;
+            }
+            
+            .hero-service-card h3 {
+                font-size: 1.2rem;
+                margin-bottom: 0.8rem;
+            }
+            
+            .hero-service-card p {
+                font-size: 0.85rem;
+                line-height: 1.6;
+            }
+            
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .about-text h2,
+            .contact-info h2 {
+                font-size: 2rem;
+            }
+            
+            .about-text p {
+                font-size: 0.95rem;
+            }
+            
+            .about-video {
+                height: 220px;
+            }
+            
+            .about-video h3 {
+                font-size: 1.1rem;
+            }
+            
+            .about-video p {
+                font-size: 0.9rem;
+            }
+            
+            .contact-item h4 {
+                font-size: 1rem;
+            }
+            
+            .contact-item p {
+                font-size: 0.9rem;
+            }
+            
+            .contact-form {
+                padding: 1.2rem;
+            }
+            
+            .contact-form h3 {
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+            }
+            
+            .form-group {
+                margin-bottom: 1.2rem;
+            }
+            
+            .form-group label {
+                font-size: 0.9rem;
+            }
+            
+            .form-group input,
+            .form-group textarea {
+                padding: 10px;
+                font-size: 0.9rem;
+            }
+            
+            .submit-btn {
+                padding: 12px 25px;
+                font-size: 0.9rem;
+            }
+            
+            footer {
+                padding: 1.5rem 0;
+            }
+            
+            footer p {
+                font-size: 0.85rem;
+                line-height: 1.4;
+            }
+            
+            .gallery-filters {
+                gap: 0.5rem;
+                margin-bottom: 2rem;
+                justify-content: center;
+            }
+            
+            .filter-btn {
+                padding: 6px 12px;
+                font-size: 0.8rem;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .gallery-item {
+                border-radius: 16px;
+            }
+            
+            .gallery-overlay h4 {
+                font-size: 1.2rem;
+            }
+            
+            .gallery-overlay p {
+                font-size: 0.85rem;
+            }
+            
+            .gallery-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 1.1rem;
+            }
+            
+            .lightbox-content {
+                max-width: 95vw;
+                max-height: 85vh;
+                margin: 0 1rem;
+            }
+            
+            .lightbox-info {
+                padding: 1.5rem;
+            }
+            
+            .lightbox-info h4 {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Ultra-wide screens - 1920px and up */
+        @media (min-width: 1920px) {
+            .container {
+                max-width: 1600px;
+            }
+            
+            .hero h1 {
+                font-size: 5.5rem;
+            }
+            
+            .section-title {
+                font-size: 4rem;
+            }
+            
+            .hero-services-grid {
+                gap: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <div class="logo-background"></div>
+                <img src="public/salondelmendologo.png" alt="Salon delMENdo" />
+            </div>
+            <div class="nav-container">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+                <a href="#contact" class="contact-cta" aria-label="Contact Us">
+                    💬 Contact
+                </a>
+            </div>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                ☰
+            </button>
+        </nav>
+        
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav" id="mobile-nav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact" class="contact-cta" style="margin: 1rem 0; text-align: center;">💬 Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero + Services Combined Section -->
+    <section class="hero" id="home">
+        <div class="floating-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+        
+        <div class="hero-content">
+            <h1>Beauty for Everyone</h1>
+            <p>Experience premium salon services designed for both men and women in a modern, welcoming environment</p>
+            <a href="#contact" class="cta-button">Book Your Appointment</a>
+        </div>
+
+        <div class="hero-services-minimal" id="services">
+            <h3 class="services-subtitle-minimal">16 Premium Services Available</h3>
+            <p class="services-description-minimal">From haircuts to spa treatments - <a href="#gallery" class="services-link">view our gallery</a></p>
+            <div class="hero-services-tags">
+                <span class="service-tag">Hair Services</span>
+                <span class="service-tag">Nail Care</span>
+                <span class="service-tag">Skincare</span>
+                <span class="service-tag">Body Treatments</span>
+                <span class="service-tag">Makeup & Beauty</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Luxury Divider -->
+    <div class="luxury-divider"></div>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Our Gallery</h2>
+            
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All Work</button>
+                <button class="filter-btn" data-filter="hair">Hair Services</button>
+                <button class="filter-btn" data-filter="nails">Nail Services</button>
+                <button class="filter-btn" data-filter="skincare">Skin & Face</button>
+                <button class="filter-btn" data-filter="body">Body Treatments</button>
+                <button class="filter-btn" data-filter="makeup">Beauty & Makeup</button>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Hair Services -->
+                <div class="gallery-item" data-category="hair">
+                    <img src="https://images.pexels.com/photos/3993442/pexels-photo-3993442.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Professional Haircut" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4>Professional Haircuts</h4>
+                        <p>Men & Women styling</p>
+                    </div>
+                    <div class="gallery-icon">👁</div>
+                </div>
+
+                <div class="gallery-item" data-category="hair">
+                    <img src="https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Hair Color Transformation" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4>Hair Color</h4>
+                        <p>Beautiful transformations</p>
+                    </div>
+                    <div class="gallery-icon">👁</div>
+                </div>
+
+                <div class="gallery-item" data-category="hair">
+                    <img src="https://images.pexels.com/photos/3993457/pexels-photo-3993457.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Hair Rebond" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4>Hair Rebond</h4>
+                        <p>Smooth & straight styles</p>
+                    </div>
+                    <div class="gallery-icon">👁</div>
+                </div>
+
+                <div class="gallery-item" data-category="hair">
+                    <img src="https://images.pexels.com/photos/3993445/pexels-photo-3993445.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Hair Treatment" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4>Hair Treatment</h4>
+                        <p>Nourishing & restorative</p>
+                    </div>
+                    <div class="gallery-icon">👁</div>
+                </div>
+
+                <!-- Nail Services -->
+                <div class="gallery-item" data-category="nails">
+                    <img src="public/manicure.jpg" alt="Manicure" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4>Manicure/Pedicure</h4>
+                        <p>Perfect nail care</p>
+                    </div>
+                    <div class="gallery-icon">👁</div>
+                </div>
+
+                <div class="gallery-item" data-category="nails">
+                    <img src="https://images.pexels.com/photos/704815/pexels-photo-704815.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Nail Extensions" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4>Nail Extensions</h4>
+                        <p>Beautiful length & shape</p>
+                    </div>
+                    <div class="gallery-icon">👁</div>
+                </div>
+
+                <div class="gallery-item" data-category="nails">
+                    <img src="https://images.pexels.com/photos/3738349/pexels-photo-3738349.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Gel Nails" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4>Gel Nail</h4>
+                        <p>Long-lasting polish</p>
+                    </div>
+                    <div class="gallery-icon">👁</div>
+                </div>
+
+                <!-- Skincare & Face -->
+                <div class="gallery-item" data-category="skincare">
+                    <img src="https://images.pexels.com/photos/3997982/pexels-photo-3997982.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Facial Treatment" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4>Facial Treatment</h4>
+                        <p>Glowing healthy skin</p>
+                    </div>
+                    <div class="gallery-icon">👁</div>
+                </div>
+
+                <div class="gallery-item" data-category="skincare">
+                    <img src="https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="RF Skin Tightening" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4>RF Skin Tightening</h4>
+                        <p>Advanced skin therapy</p>
+                    </div>
+                    <div class="gallery-icon">👁</div>
+                </div>
+
+                <div class="gallery-item" data-category="skincare">
+                    <img src="public/threading.jpg" alt="Threading" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4>Threading</h4>
+                        <p>Precise eyebrow shaping</p>
+                    </div>
+                    <div class="gallery-icon">👁</div>
+                </div>
+
+                <!-- Body Treatments -->
+                <div class="gallery-item" data-category="body">
+                    <img src="public/bodymassage.jpg" alt="Body Massage" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4>Body Massage</h4>
+                        <p>Relaxation & wellness</p>
+                    </div>
+                    <div class="gallery-icon">👁</div>
+                </div>
+
+                <div class="gallery-item" data-category="body">
+                    <img src="public/footspa.jpg" alt="Footspa" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4>Footspa</h4>
+                        <p>Pampering foot care</p>
+                    </div>
+                    <div class="gallery-icon">👁</div>
+                </div>
+
+                <div class="gallery-item" data-category="body">
+                    <img src="public/laser_hair_removal.jpg" alt="Laser Hair Removal" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4>Laser Hair Removal</h4>
+                        <p>Smooth skin solutions</p>
+                    </div>
+                    <div class="gallery-icon">👁</div>
+                </div>
+
+                <!-- Beauty & Makeup -->
+                <div class="gallery-item" data-category="makeup">
+                    <img src="https://images.pexels.com/photos/5240700/pexels-photo-5240700.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Hair & Makeup" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4>Hair & Make Up</h4>
+                        <p>Special event styling</p>
+                    </div>
+                    <div class="gallery-icon">👁</div>
+                </div>
+
+                <div class="gallery-item" data-category="makeup">
+                    <img src="public/eyelashextension.jpg" alt="Eyelash Extensions" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4>Eyelash Extension</h4>
+                        <p>Beautiful longer lashes</p>
+                    </div>
+                    <div class="gallery-icon">👁</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightbox-close">&times;</button>
+            <img id="lightbox-image" src="" alt="">
+            <div class="lightbox-info" id="lightbox-info">
+                <h4 id="lightbox-title"></h4>
+                <p id="lightbox-description"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Luxury Divider -->
+    <div class="luxury-divider"></div>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About <span class="salon-name">Salon <span class="del">del</span><span class="men">MEN</span><span class="do">do</span></span></h2>
+                    <p>We believe beauty knows no boundaries. Our salon is a modern sanctuary where men and women come together to experience exceptional service in an inclusive, welcoming environment.</p>
+                    <p>With over 10 years of experience, our team of skilled professionals stays at the forefront of beauty trends while maintaining the classic techniques that never go out of style.</p>
+                    <p>From the moment you step through our doors, you'll experience personalized service tailored to your unique style and preferences. We're not just about looking good – we're about feeling confident and radiant.</p>
+                </div>
+                <div class="about-video">
+                    <video 
+                        class="salon-video" 
+                        autoplay 
+                        muted 
+                        loop 
+                        playsinline
+                        poster="public/salon-poster.jpg">
+                        <source src="public/3997849-uhd_2160_4096_25fps.mp4" type="video/mp4">
+                        <div class="video-fallback">
+                            <h3>Modern Salon Experience</h3>
+                            <p>Where style meets comfort</p>
+                            <p class="video-note">Video not supported in your browser</p>
+                        </div>
+                    </video>
+                    <div class="video-overlay">
+                        <h3>Modern Salon Experience</h3>
+                        <p>Where style meets comfort</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Luxury Divider -->
+    <div class="luxury-divider"></div>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Get In Touch</h2>
+                    <div class="contact-item">
+                        <h4>Address</h4>
+                        <p><a href="https://maps.google.com/?q=2/F+EM+Commercial+Building+Plaza,+Gov.+Fortunato+Halili+Rd+cor+Tubigan+Rd,+Brgy.+Gaya-gaya,+San+Jose+del+Monte+City,+3023+Bulacan,+Philippines" target="_blank" rel="noopener noreferrer" class="address-link">
+                            📍 2/F EM Commercial Building Plaza<br>
+                            Gov. Fortunato Halili Rd cor Tubigan Rd<br>
+                            Brgy. Gaya-gaya, San Jose del Monte City<br>
+                            3023 Bulacan, Philippines
+                        </a></p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>Phone</h4>
+                        <p>0917 124 4358</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>Email</h4>
+                        <p>salondelmendo@gmail.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>Follow Us</h4>
+                        <p><a href="https://tiktok.com/@salon.delmendo" target="_blank">@salon.delmendo on TikTok</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>Hours</h4>
+                        <p>Mon-Sat: 9:00 AM - 8:00 PM<br>Sunday: 10:00 AM - 6:00 PM</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Book an Appointment</h3>
+                    <form action="mailto:salondelmendo@gmail.com" method="post" enctype="text/plain">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service</label>
+                            <input type="text" id="service" name="service" placeholder="Hair Cut, Color, Spa Treatment, etc.">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Any special requests or preferred appointment time..."></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 <span class="salon-name">Salon <span class="del">del</span><span class="men">MEN</span><span class="do">do</span></span>. All rights reserved. | For men and women</p>
+        </div>
+    </footer>
+
+    <!-- Chatbot -->
+    <div class="chatbot-preview" id="chatbot-preview">
+        <span id="preview-message">👋 Need help? Ask me about our services!</span>
+    </div>
+    <button class="chatbot-toggle" id="chatbot-toggle">
+        <img src="public/salondelmendologo.png" alt="Chat with Salon delMENdo" class="chatbot-logo" />
+    </button>
+
+    <div class="chatbot-container" id="chatbot-container">
+        <div class="chatbot-header">
+            <h3>Salon Assistant</h3>
+            <p>Ask me anything about our services!</p>
+        </div>
+        
+        <div class="chatbot-messages" id="chatbot-messages">
+            <div class="chatbot-message message-bot">
+                <div class="bot-avatar">
+                    <img src="public/salondelmendologo.png" alt="Salon delMENdo" />
+                </div>
+                <div class="message-content">
+                    Hello! Welcome to <span class="salon-name">Salon <span class="del">del</span><span class="men">MEN</span><span class="do">do</span></span>! 👋 I'm here to help you with information about our services, location, hours, and booking. How can I assist you today?
+                    <div class="quick-replies">
+                        <div class="quick-reply" onclick="sendQuickReply('Our Services')">Our Services</div>
+                        <div class="quick-reply" onclick="sendQuickReply('Location & Hours')">Location & Hours</div>
+                        <div class="quick-reply" onclick="sendQuickReply('Book Appointment')">Book Appointment</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chatbot-input">
+            <input type="text" id="chatbot-input" placeholder="Type your question...">
+            <button class="chatbot-send" id="chatbot-send">
+                ➤
+            </button>
+        </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>

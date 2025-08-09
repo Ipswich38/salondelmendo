@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C \"/Users/zer0fx28/WebstormProjects/salondelmendo\" status)"
+    ],
+    "deny": []
+  }
+}
